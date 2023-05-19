@@ -18,7 +18,7 @@ export const Banner = () => {
   const toRotate = [ "Robotics Engineer", "Embedded S/W Engineer", "Software Architect" ];
   const period = 2000;
     const [paragraphText, setParagraphText] = useState(
-    "My fullname is Saidnazarova Odinanabonu. I'm 15 years old. I study 249-school in 10th grade. I am a front-end web developer. I can make the website more interactive with web animation. I study at Web Brain Academy group G5. When I first came to web brain, I had no knowledge of programming. But now with the help of strong aspirations and teachers, my level of knowledge has greatly increased and I can freely create website views that are used in our daily lives."
+    "I am on a master of electrical and electronic computer engineering at the Graduate Scholl of Engineering of Korea University . As an electrical and electronic computer engineering major, I have developed a strong sense of responsibility and excitement for making the programs I create work flawlessly. Recently, I have become increasingly interested in unmanned robotics systems and their potential to revolutionize industries ranging from agriculture to manufacturing. In particular, I am passionate about developing a light and robust visual-based SLAM system that utilizes artificial intelligence to run efficiently on mid-performance SBCs. My goal is to create a system that is not only highly precise but also incredibly durable, capable of operating in challenging environments with minimal intervention. I am excited to contribute to this field and to help shape the future of robotics. Plz feel free to contact by clicking the below button :)"
   );
 
   useEffect(() => {
@@ -68,7 +68,7 @@ export const Banner = () => {
               <TrackVisibility>
                 {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <span className="tagline">Welcome to my Portfolio</span>
+                  <span className="tagline">Welcome to my CV</span>
                   <h1>{`Hi! I'm Jay`} <br></br></h1>
                   <h2><span className="txt-rotate" dataPeriod="1" data-rotate='[ "Robotics Engineer", "Embedded S/W Engineer", "Software Architect"]'><span className="wrap">{text}</span></span></h2>
                   <p>{paragraphText}</p>

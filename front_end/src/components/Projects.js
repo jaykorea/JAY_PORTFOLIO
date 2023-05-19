@@ -6,6 +6,14 @@ import projImg3 from "../assets/img/project1.jpg";
 import projImg4 from "../assets/img/first work.jpg";
 import projImg5 from "../assets/img/fifth work.jpg";
 import projImg6 from "../assets/img/12345.jpg";
+
+import robotImg1 from "../assets/img/freeway.png";
+import robotImg2 from "../assets/img/del_bot.png";
+import robotImg3 from "../assets/img/serv_bot1.png";
+import robotImg4 from "../assets/img/serv_bot2.png";
+import robotImg5 from "../assets/img/jay.png";
+import robotImg6 from "../assets/img/jay.png";
+
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -16,11 +24,11 @@ export const Projects = () => {
     {
       title: "Robot Project1",
       thumbnail_description: "My 1st Robot Projecdt",
-      thumbnail: projImg1,
-      imgUrl1: projImg1,
-      imgUrl2: projImg1,
-      imgUrl3: projImg1,
-      imgUrl4: projImg1,
+      thumbnail: robotImg1,
+      imgUrl1: robotImg1,
+      imgUrl2: robotImg1,
+      imgUrl3: robotImg1,
+      imgUrl4: robotImg1,
       description1: "hello",
       description2: "world",
       description3: "cpp",
@@ -29,11 +37,11 @@ export const Projects = () => {
     {
       title: "Robot Project2",
       thumbnail_description: "My 2nd Robot Projecdt",
-      thumbnail: projImg2,
-      imgUrl1: projImg2,
-      imgUrl2: projImg2,
-      imgUrl3: projImg2,
-      imgUrl4: projImg2,
+      thumbnail: robotImg2,
+      imgUrl1: robotImg2,
+      imgUrl2: robotImg2,
+      imgUrl3: robotImg2,
+      imgUrl4: robotImg2,
       description1: "hello",
       description2: "world",
       description3: "cpp",
@@ -42,11 +50,11 @@ export const Projects = () => {
     {
       title: "Robot Project3",
       thumbnail_description: "My 3rd Robot Projecdt",
-      thumbnail: projImg3,
-      imgUrl1: projImg3,
-      imgUrl2: projImg3,
-      imgUrl3: projImg3,
-      imgUrl4: projImg3,
+      thumbnail: robotImg3,
+      imgUrl1: robotImg3,
+      imgUrl2: robotImg3,
+      imgUrl3: robotImg3,
+      imgUrl4: robotImg3,
       description1: "hello",
       description2: "world",
       description3: "cpp",
@@ -55,11 +63,11 @@ export const Projects = () => {
     {
       title: "Robot Project4",
       thumbnail_description: "My 4th Robot Projecdt",
-      thumbnail: projImg4,
-      imgUrl1: projImg4,
-      imgUrl2: projImg4,
-      imgUrl3: projImg4,
-      imgUrl4: projImg4,
+      thumbnail: robotImg4,
+      imgUrl1: robotImg4,
+      imgUrl2: robotImg4,
+      imgUrl3: robotImg4,
+      imgUrl4: robotImg4,
       description1: "hello",
       description2: "world",
       description3: "cpp",
@@ -68,11 +76,11 @@ export const Projects = () => {
     {
       title: "Robot Project5",
       thumbnail_description: "My 5th Robot Projecdt",
-      thumbnail: projImg5,
-      imgUrl1: projImg5,
-      imgUrl2: projImg5,
-      imgUrl3: projImg5,
-      imgUrl4: projImg5,
+      thumbnail: robotImg5,
+      imgUrl1: robotImg5,
+      imgUrl2: robotImg5,
+      imgUrl3: robotImg5,
+      imgUrl4: robotImg5,
       description1: "hello",
       description2: "world",
       description3: "cpp",
@@ -81,11 +89,11 @@ export const Projects = () => {
     {
       title: "Robot Project6",
       thumbnail_description: "My 6th Robot Projecdt",
-      thumbnail: projImg6,
-      imgUrl1: projImg6,
-      imgUrl2: projImg6,
-      imgUrl3: projImg6,
-      imgUrl4: projImg6,
+      thumbnail: robotImg6,
+      imgUrl1: robotImg6,
+      imgUrl2: robotImg6,
+      imgUrl3: robotImg6,
+      imgUrl4: robotImg6,
       description1: "hello",
       description2: "world",
       description3: "cpp",
@@ -264,7 +272,7 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
-                <p>I show you to all the big and small projects I have done so far</p>
+                <p>I show you to all projects I have done so far categorized into 'Robot', 'R&D(related patent and published paaer)', and 'IoT' devices which I've developed.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
@@ -276,6 +284,9 @@ export const Projects = () => {
                     <Nav.Item>
                       <Nav.Link eventKey="third">IoT</Nav.Link>
                     </Nav.Item>
+                    {/* <Nav.Item>
+                      <Nav.Link eventKey="fourth">Competition</Nav.Link>
+                    </Nav.Item> */}
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
@@ -309,6 +320,21 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                      <Row>
+                        {
+                          iot.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="fourth">
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                       <Row>
                         {
