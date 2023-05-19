@@ -24,7 +24,7 @@ BASE_DIR_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-re679ll9du8cxo_9&7jj-2lvatjdgkkw%86l#f^^beam3ji05x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -54,7 +54,7 @@ INSTALLED_APPS = [
 if DEBUG == True:
     CORS_ORIGIN_ALLOW_ALL = True
 else:
-    CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:8001','http://127.0.0.1:3001', 'http://localhost:8001','http://localhost:3001', 'http://www.whoisjay.co.kr', 'https://www.whoisjay.co.kr']
+    CORS_ORIGIN_WHITELIST = ['http://192.168.0.9','http://127.0.0.1:8001','http://127.0.0.1:3001', 'http://localhost:8001','http://localhost:3001', 'http://www.whoisjaycho.com', 'https://www.whoisjaycho.com']
 
 CORS_ALLOW_CREDENTIALS = True
 

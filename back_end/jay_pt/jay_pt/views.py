@@ -19,4 +19,4 @@ def get_req_local_url(request):
     return JsonResponse({'req_url': 'http://127.0.0.1:8001'})
 
 def get_req_dns_url(request):
-    return JsonResponse({'req_url': 'https://www.whoisjay.co.kr'})
+    return JsonResponse({'req_url': 'https://www.whoisjaycho.com'})

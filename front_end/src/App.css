@@ -83,19 +83,21 @@ p.danger {
 }
 /************ Navbar Css ************/
 nav.navbar {
-  padding: 18px 0;
+  /* margin-top: 10vh; */
+  padding: 5px 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
+  background-color: transparent;
 }
 nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
 }
 nav.navbar a.navbar-brand {
-    width: 9%;
+    width: 11vh;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -103,13 +105,15 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
-  opacity: 0.75;
+  opacity: 1;
+  background-color: #121212;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     opacity: 1;
 }
 span.navbar-text {
+  background-color: #121212;
     display: flex;
     align-items: center;
 }
@@ -186,7 +190,7 @@ span.navbar-text {
 }
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
-	outline: none;
+	  outline: none;
     box-shadow: none;
 }
 nav.navbar .navbar-toggler-icon {
@@ -233,7 +237,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
+  padding: 12vh 0 200px 0;
   background-image: url('./assets/img/banner-bg.png');
   background-position: top center;
   background-size: cover;
@@ -243,39 +247,44 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(29, 7, 126, 0.512) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
 }
 .banner h1 {
-  font-size: 65px;
+  height: 190px;
+  margin-top: 1.5vh;
+  font-size: 6.8vh;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
   margin-bottom: 20px;
   display: block;
+  white-space: normal;
 }
 .banner p {
-  color: #B8B8B8;
+  color: #cacaca;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
+  margin-bottom: 5vh;
 }
 .banner button {
+  margin-bottom: 5vh;
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 60px;
+  margin-top: 30px;
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
 }
 .banner button svg {
   font-size: 25px;
-  margin-left: 10px;
+  margin-left: 20px;
   transition: 0.3s ease-in-out;
   line-height: 1;
 }
@@ -303,15 +312,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills Css ************/
 .skill {
-  padding: 0 0 50px 0;
+  padding: 10px 0 300px 0;
   position: relative;
 }
 .skill-bx {
   background: #151515;
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
-  margin-top: 0px;
+  padding: 100px 50px;
+  margin-top: 5vh;
 }
 .skill h2 {
 	font-size: 45px;

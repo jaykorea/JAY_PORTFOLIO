@@ -69,7 +69,7 @@ export const Banner = () => {
                 {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>{`Hi! I'm Jay`} <br></br><span className="txt-rotate" dataPeriod="10" data-rotate='[ "Robotics Engineer", "Embedded S/W Engineer", "Software Architect"]'><span className="wrap">{text}</span></span></h1>
+                  <h1>{`Hi! I'm Jay`} <br></br><span className="txt-rotate" dataPeriod="1" data-rotate='[ "Robotics Engineer", "Embedded S/W Engineer", "Software Architect"]'><span className="wrap">{text}</span></span></h1>
                   <p>{paragraphText}</p>
                     <HashLink smooth to="#contact">
                       <button>Contact Here<ArrowRightCircle size={30} /></button>
