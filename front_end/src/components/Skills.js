@@ -55,6 +55,27 @@ export const Skills = () => {
                             </div>
                         </Carousel>
                     </div>
+                    <div className="skill-bx2 wow zoomIn">
+                        <p>I have learned different programming languages ​​so far and as far as my skills are concerned<br></br></p>
+                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                            <div className="item">
+                                <img src={meter1} alt="Image" />
+                                <h5>C++</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter2} alt="Image" />
+                                <h5>C</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter3} alt="Image" />
+                                <h5>Python</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter1} alt="Image" />
+                                <h5>Javascript</h5>
+                            </div>
+                        </Carousel>
+                    </div>
                 </div>
             </div>
         </div>
