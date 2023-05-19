@@ -23,6 +23,7 @@ genlisp==0.4.16
 genmsg==0.5.17
 gennodejs==2.0.1
 genpy==0.6.16
+gunicorn==20.1.0
 image_geometry==1.13.1
 interactive-markers==1.11.5
 joint_state_publisher==1.12.15
