@@ -12,7 +12,6 @@ def contact(request):
         phone = data.get('phone')
         message = data.get('message')
 
-
         # Send email
         send_mail(
             'Contact Form Submission',
