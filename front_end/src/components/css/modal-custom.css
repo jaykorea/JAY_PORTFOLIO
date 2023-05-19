@@ -1,0 +1,39 @@
+.modal-body{
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  margin-top: 12vh;
+  max-width: 145vh; /* Set the maximum width of the modal dialog */
+  width: auto; /* Set the width of the modal dialog */
+  max-height: 90vh; /* Set the maximum height of the modal dialog to 90% of the viewport height */
+  height: auto; /* Let the height adjust based on content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black; /* Set the text color to black */
+}
+
+.modal-header {
+  margin-top: 0vh; /* Set the top margin of the image */
+  color: black; /* Set the header text color to black */
+}
+
+.modal-body img {
+  overflow-y: auto;
+  margin-top: 10px; /* Set the top margin of the image */
+  margin-bottom: 10px; /* Set the bottom margin of the image */
+}
+
+.modal-body span {
+  font-size: 16px; /* Set the font size of the span element */
+}
+/* 
+body.modal-open {
+  overflow: auto !important;
+  position: initial;
+  padding-right: 0;
+} */
+
+  
