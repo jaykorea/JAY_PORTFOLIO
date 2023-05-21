@@ -54,7 +54,7 @@ export const NavBar = () => {
               <div className="social-icon">
                 <HashLink smooth to="#"><img src={navIcon1} alt="" /></HashLink>
                 <HashLink smooth to="#"><img src={navIcon2} alt="" /></HashLink>
-                <HashLink smooth to="#"><img src={navIcon3} alt="" /></HashLink>
+                {/* <HashLink smooth to="#"><img src={navIcon3} alt="" /></HashLink> */}
               </div>
               <HashLink smooth to='#contact'>
                 <button onClick={() => onUpdateActiveLink('contact')} className="vvd"><span>Contact</span></button>

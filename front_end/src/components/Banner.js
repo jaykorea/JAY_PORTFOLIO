@@ -18,8 +18,10 @@ export const Banner = () => {
   const toRotate = [ "Robotics Engineer", "Embedded S/W Engineer", "Software Architect" ];
   const period = 2000;
     const [paragraphText, setParagraphText] = useState(
-    "I am on a master of electrical and electronic computer engineering at the Graduate Scholl of Engineering of Korea University . As an electrical and electronic computer engineering major, I have developed a strong sense of responsibility and excitement for making the programs I create work flawlessly. Recently, I have become increasingly interested in unmanned robotics systems and their potential to revolutionize industries ranging from agriculture to manufacturing. In particular, I am passionate about developing a light and robust visual-based SLAM system that utilizes artificial intelligence to run efficiently on mid-performance SBCs. My goal is to create a system that is not only highly precise but also incredibly durable, capable of operating in challenging environments with minimal intervention. I am excited to contribute to this field and to help shape the future of robotics. Plz feel free to contact by clicking the below button :)"
+    "I am on a master of electrical and electronic computer engineering at the Graduate School of Engineering of Korea University . As an electrical and electronic computer engineering major, I have developed a strong sense of responsibility and excitement for making the programs I create work flawlessly. Recently, I have become increasingly interested in unmanned robotics systems and their potential to revolutionize industries ranging from agriculture to manufacturing. In particular, I am passionate about developing a light and robust visual-based SLAM system that utilizes artificial intelligence to run efficiently on mid-performance SBCs. My goal is to create a system that is not only highly precise but also incredibly durable, capable of operating in challenging environments with minimal intervention. I am excited to contribute to this field and to help shape the future of robotics."
   );
+
+  const paragraphText2 =  "Plz feel free to contact by clicking the below button :)"
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -72,6 +74,7 @@ export const Banner = () => {
                   <h1>{`Hi! I'm Jay`} <br></br></h1>
                   <h2><span className="txt-rotate" dataPeriod="1" data-rotate='[ "Robotics Engineer", "Embedded S/W Engineer", "Software Architect"]'><span className="wrap">{text}</span></span></h2>
                   <p>{paragraphText}</p>
+                  <p>{paragraphText2}</p>
                     <HashLink smooth to="#contact">
                       <button>Contact Here<ArrowRightCircle size={30} /></button>
                     </HashLink>
