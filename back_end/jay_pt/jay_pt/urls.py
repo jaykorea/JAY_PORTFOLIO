@@ -21,7 +21,7 @@ from django.conf.urls import url
 from django.urls import path, include, re_path
 from django.views.static import serve
 from . import views
-from django.conf.urls.static import static
+from django.conf.urls.static import static 
 
 if settings.DEBUG == True:
     api_req_url = views.get_req_local_url

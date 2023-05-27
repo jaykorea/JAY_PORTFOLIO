@@ -17,7 +17,7 @@ export const ProjectCard_temp = ({ title, description, imgUrl }) => {
 }
 
 
-export const ProjectCard = ({ title, thumbnail, thumbnail_description, imgUrl1, imgUrl2, imgUrl3, imgUrl4, description1, description2, description3, description4 }) => {
+export const ProjectCard = ({ title, thumbnail, thumbnail_description, videoUrl, imgUrl1, imgUrl2, imgUrl3, imgUrl4, description1_title, description1, description2_title, description2, description3_title, description3, description4_title, description4 }) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleModalShow = () => {
@@ -38,11 +38,18 @@ export const ProjectCard = ({ title, thumbnail, thumbnail_description, imgUrl1, 
         </div>
       </div>
         <Modal show={showModal} onHide={handleModalClose}>
-          <Modal.Header fuck>
-              <Modal.Title>{title}</Modal.Title> 
+          <Modal.Header tiitle>
+              <Modal.Title><h2>{title}</h2></Modal.Title> 
           </Modal.Header>
             <Modal.Body>
-              {description1 && <span>{description1}</span>}
+              {description1_title && <h3>{description1_title}</h3>}
+              {description1 && <span>{description1}</span>} 
+              {videoUrl && (
+                <video className="project-video" controls>
+                  <source src={videoUrl} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
               {imgUrl1 && <img src={imgUrl1} alt={title} />}
               {description2 && <span>{description2}</span>}
               {imgUrl2 && <img src={imgUrl2} alt={title} />}

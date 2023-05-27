@@ -542,6 +542,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 15px;
   letter-spacing: 0.8px;
 }
+.project-video {
+  width: 100%; /* Set the desired width for the video */
+  margin-bottom: 10px; /* Add margin to create spacing */
+  display: block;
+  margin: 0 auto;
+}
 .background-image-right {
   top: 20%;
   position: absolute;
@@ -550,6 +556,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: 0;
   z-index: -4;
 }
+
 
 /************ Contact Css ************/
 .contact {

@@ -1,6 +1,8 @@
 py36/
+ssl/
 pem/
-
+files/
+staticfiles/
 # Django stuff:
 *.log
 local_settings.py

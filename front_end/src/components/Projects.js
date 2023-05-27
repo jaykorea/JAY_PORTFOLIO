@@ -14,6 +14,8 @@ import robotImg4 from "../assets/img/serv_bot2.png";
 import robotImg5 from "../assets/img/jay.png";
 import robotImg6 from "../assets/img/jay.png";
 
+import video1 from "../assets/video/simulation.mp4";
+
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -22,17 +24,22 @@ export const Projects = () => {
 
   const robot = [
     {
-      title: "Robot Project1",
-      thumbnail_description: "My 1st Robot Projecdt",
+      title: "Development of Autonomous Mobile Robot",
+      thumbnail_description: "Development of self-driving mobild robot for occupant sensitive intent recognition",
       thumbnail: robotImg1,
       imgUrl1: robotImg1,
       imgUrl2: robotImg1,
       imgUrl3: robotImg1,
       imgUrl4: robotImg1,
-      description1: "hello",
-      description2: "world",
-      description3: "cpp",
-      description4: "python",
+      videoUrl: video1,
+      description1_title: "Overview",
+      description1: "The inspiration behind this project stemmed from my passion for robotics and a desire to create a mobility solution that prioritizes both safety and personalization. I embarked on this endeavor to push the boundaries of autonomous navigation, integrating cutting-edge hardware and software technologies to enhance the overall user experience and make a positive impact on the lives of individuals with mobility challenges. Furthermore, I integrated the various driving logic with passensger intent recognition data processed with deeplearning network to operate HMI(Human Machine Interface) as well as satifying the safety function to keep the passensger safe from hazardous circumstances.",
+      description2_title: "Hardware",
+      description2: "",
+      description3_title: "Software",
+      description3: "",
+      description4_title: "Open",
+      description4: "For the more details and the ROS setup to perform the robot serever, please refer to the github README.md",
     },
     {
       title: "Robot Project2",

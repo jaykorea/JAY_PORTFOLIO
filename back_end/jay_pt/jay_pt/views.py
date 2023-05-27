@@ -3,7 +3,7 @@ import socket
 import fcntl
 import struct
 
-network_interface_name = b'ens259f1'
+network_interface_name = b'ens259f1' 
 
 def get_req_public_url(request):
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
