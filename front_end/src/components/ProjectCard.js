@@ -17,7 +17,7 @@ export const ProjectCard_temp = ({ title, description, imgUrl }) => {
 }
 
 
-export const ProjectCard = ({ title, thumbnail, thumbnail_description, videoUrl, imgUrl1, imgUrl2, imgUrl3, imgUrl4, description1_title, description1, description2_title, description2, description3_title, description3, description4_title, description4 }) => {
+export const ProjectCard = ({ title, thumbnail, thumbnail_description, videoUrl1, imgUrl1, imgUrl2, imgUrl3, imgUrl3_1, imgUrl3_2, imgUrl3_3, imgUrl4, imgUrl10, description1_title, description1_sub_title, description1, description2_title, description2_sub_title, description2, description3_title, description3_sub_title, description3_sub_title1, description3_sub_title2, description3, description3_1, description3_2, description4_title, description4_sub_title, description4, description10_title, description10_sub_title, description10 }) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleModalShow = () => {
@@ -43,20 +43,55 @@ export const ProjectCard = ({ title, thumbnail, thumbnail_description, videoUrl,
           </Modal.Header>
             <Modal.Body>
               {description1_title && <h3>{description1_title}</h3>}
+              {description1_sub_title && <h4>{description1_sub_title}</h4>}
+              {imgUrl1 && <img src={imgUrl1} alt={title} />}
               {description1 && <span>{description1}</span>} 
-              {videoUrl && (
-                <video className="project-video" controls>
-                  <source src={videoUrl} type="video/mp4" />
+
+              {description2_title && <h3>{description2_title}</h3>}
+              {description2_sub_title && <h3>{description2_sub_title}</h3>}
+              {videoUrl1 && (
+                <video className="project-video" controls autoPlay>
+                  <source src={videoUrl1} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               )}
-              {imgUrl1 && <img src={imgUrl1} alt={title} />}
-              {description2 && <span>{description2}</span>}
               {imgUrl2 && <img src={imgUrl2} alt={title} />}
-              {description3 && <span>{description3}</span>}
-              {imgUrl3 && <img src={imgUrl3} alt={title} />}
-              {description4 && <span>{description4}</span>}
-              {imgUrl4 && <img src={imgUrl4} alt={title} />}
+              {description2 && <span>{description2}</span>}
+
+              {description3_title && <h3>{description3_title}</h3>}
+                {description3_sub_title && <h4>{description3_sub_title}</h4>}
+                {imgUrl3 && (
+                  <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img src={imgUrl3} alt={title} style={{ width: '98%', border: '1px solid rgba(0, 0, 0, 0.5)' }} />
+                  </div>
+                )}
+                {description3 && <span>{description3}</span>}
+                {imgUrl3_1 && (
+                  <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img src={imgUrl3_1} alt={title} style={{ width: '100%', border: '1px solid rgba(0, 0, 0, 0.5)' }} />
+                  </div>
+                )}
+                {description3_sub_title1 && <h4>{description3_sub_title1}</h4>}
+                {imgUrl3_2 && (
+                  <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img src={imgUrl3_2} alt={title} style={{ width: '70%', border: '1px solid rgba(0, 0, 0, 0.5)' }} />
+                  </div>
+                )}
+                {description3_1 && <span>{description3_1}</span>}
+                {description3_sub_title2 && <h4>{description3_sub_title2}</h4>}
+                {imgUrl3_3 && (
+                  <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img src={imgUrl3_3} alt={title} style={{ width: '90%', border: '1px solid rgba(0, 0, 0, 0.5)' }} />
+                  </div>
+                )}
+                {description3_2 && <span>{description3_2}</span>}
+
+
+              {description10_title && <h3>{description10_title}</h3>}
+              {description10_sub_title && <h4>{description10_sub_title}</h4>}
+              {imgUrl10 && <img src={imgUrl10} alt={title} />}
+              {description10 && <span>{description10}</span>}
+
               {/* Add more project information as needed */}
             </Modal.Body>
           <Modal.Footer>

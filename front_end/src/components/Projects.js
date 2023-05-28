@@ -8,13 +8,26 @@ import projImg5 from "../assets/img/fifth work.jpg";
 import projImg6 from "../assets/img/12345.jpg";
 
 import robotImg1 from "../assets/img/freeway.png";
+import motor_calculation_selection from "../assets/img/robot/motor_calculation_selection.png"
+import computing_sensors from "../assets/img/robot/computing_sensors.png"
+import mechanical_design from "../assets/img/robot/mechanical_design.png"
+
 import robotImg2 from "../assets/img/del_bot.png";
+
+
 import robotImg3 from "../assets/img/serv_bot1.png";
+
+
 import robotImg4 from "../assets/img/serv_bot2.png";
+
+
 import robotImg5 from "../assets/img/jay.png";
+
+
 import robotImg6 from "../assets/img/jay.png";
 
-import video1 from "../assets/video/simulation.mp4";
+
+import demo_video from "../assets/video/drive_test.mp4";
 
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
@@ -24,23 +37,71 @@ export const Projects = () => {
 
   const robot = [
     {
-      title: "Development of Autonomous Mobile Robot",
+      title: "Development of Personal Autonomous Wheelchair",
       thumbnail_description: "Development of self-driving mobild robot for occupant sensitive intent recognition",
       thumbnail: robotImg1,
-      imgUrl1: robotImg1,
-      imgUrl2: robotImg1,
-      imgUrl3: robotImg1,
-      imgUrl4: robotImg1,
-      videoUrl: video1,
+      //imgUrl1: robotImg1,
+      //imgUrl2: robotImg1,
+      imgUrl3: motor_calculation_selection,
+      //imgUrl3_1:
+      imgUrl3_2: computing_sensors,
+      imgUrl3_3: mechanical_design,
+      //imgUrl4: robotImg1,
+      //imgUrl5: robotImg1,
+      //imgUrl6: robotImg1,
+      //imgUrl7: robotImg1,
+      //imgUrl8: robotImg1,
+      //imgUrl9: robotImg1,
+      //imgUrl10: robotImg1,
+      //imgUrl11: robotImg1,
+      //imgUrl12: robotImg1,
       description1_title: "Overview",
-      description1: "The inspiration behind this project stemmed from my passion for robotics and a desire to create a mobility solution that prioritizes both safety and personalization. I embarked on this endeavor to push the boundaries of autonomous navigation, integrating cutting-edge hardware and software technologies to enhance the overall user experience and make a positive impact on the lives of individuals with mobility challenges. Furthermore, I integrated the various driving logic with passensger intent recognition data processed with deeplearning network to operate HMI(Human Machine Interface) as well as satifying the safety function to keep the passensger safe from hazardous circumstances.",
-      description2_title: "Hardware",
-      description2: "",
-      description3_title: "Software",
-      description3: "",
-      description4_title: "Open",
-      description4: "For the more details and the ROS setup to perform the robot serever, please refer to the github README.md",
+      description1: (
+        <span>
+        The inspiration behind this project stemmed from my passion for robotics and a desire to create a mobility solution that prioritizes both safety and personalization. I embarked on this endeavor to push the boundaries of autonomous navigation, integrating cutting-edge hardware and software technologies to enhance the overall user experience and make a positive impact on the lives of individuals with mobility challenges. Furthermore, I integrated the various driving logic with passensger intent recognition data processed with deeplearning network to operate HMI(Human Machine Interface) as well as satifying the safety function to keep the passensger safe from hazardous circumstances.
+        </span>
+      ),
+        description2_title: "Demo",
+      videoUrl1: demo_video,
+      description2: "demo script",
+      description3_title: "Hardware",
+      description3_sub_title: "⦁ Driving Unit",
+      description3: (
+        <span>
+          These calculations provide insights into the torque requirements and characteristics of the motor needed to meet the specified maximum weight, wheel radius, wheel diameter, and maximum speed of the system. Following the calculation of the required performance, I configured the driving unit with dual 'MDR200' and 'MD400T' of 'MD Robot' corporate.<br />
+          <br />
+          Reviewing the motor and motor driver specification, I set the safety margin of the stall torque to satisfy to drive normally loading max weight to 100kg setting the gear ratio to 30:1.
+        </span>
+      ),
+      description3_sub_title1: "⦁ Computing & Sensors",
+      description3_1: (
+        <span>
+          [Hardware and Sensor Configuration]<br />
+          The hardware and sensor configuration for the self-driving mobile robot includes the following components:<br />
+          <br />
+          1. Double Depth Camera (RealSense D455 Model): The robot is equipped with a pair of RealSense D455 cameras. These depth cameras provide 3D object detection capabilities and are used for detecting AR markers for localization. The cameras capture depth information, enabling the robot to perceive the environment in three dimensions.<br />
+          <br />
+          2. MCU (Microcontroller Unit): The robot's MCU is responsible for communication with the robot server using ROSserial. It processes control of LED(WS2182 chip), Joystick, Ultra sonar and interrupt handling(emergency button, control button). It interfaces with the server through UART TTL to USB communication, ensuring reliable data exchange and control between the robot and the server.<br />
+          <br />
+          3. 2D Lidars:<br />
+          - LakiBeam Lidar: It is utilized for calculating the time to collision (TTC) and transmitting relevant data to the safety control node. It plays a crucial role in assessing the proximity and potential collision risks with detected objects in real-time.<br />
+          - RPLidar S2: It is employed for the AMCL (Adaptive Monte Carlo Localization) algorithm. It provides essential environmental perception data, aiding in the robot's localization and mapping capabilities.<br />
+          <br />
+          The combination of these sensors, cameras, and the MCU enables the robot to gather comprehensive environmental information, ranging from depth perception and object detection to localization and mapping. This rich sensor suite empowers the robot's autonomy and decision-making processes, ensuring efficient and safe navigation in complex environments.
+        </span>
+      ),
+      description3_sub_title2: "⦁ Mechanical Designs",
+      description3_2: (
+        <span>
+        It basically designed with 3D design tool CATIA. All the sensor coordination is based on the axis(Y) of the motor axis(i.e. wheel radius length from the ground).
+        </span>
+      ),
+      description10_title: "Open",
+      description10: (
+        <span dangerouslySetInnerHTML={{ __html: "For more details and the ROS setup to perform the robot server, please refer to my <a href='https://github.com/jaykorea/fw_rev_04_for_wheelchair' style='margin-left: 5px; margin-right: 5px; font-size:19px'>github</a> link." }} />
+      ),
     },
+
     {
       title: "Robot Project2",
       thumbnail_description: "My 2nd Robot Projecdt",
@@ -54,6 +115,7 @@ export const Projects = () => {
       description3: "cpp",
       description4: "python",
     },
+
     {
       title: "Robot Project3",
       thumbnail_description: "My 3rd Robot Projecdt",
@@ -67,6 +129,7 @@ export const Projects = () => {
       description3: "cpp",
       description4: "python",
     },
+
     {
       title: "Robot Project4",
       thumbnail_description: "My 4th Robot Projecdt",
@@ -80,6 +143,7 @@ export const Projects = () => {
       description3: "cpp",
       description4: "python",
     },
+
     {
       title: "Robot Project5",
       thumbnail_description: "My 5th Robot Projecdt",
@@ -93,6 +157,7 @@ export const Projects = () => {
       description3: "cpp",
       description4: "python",
     },
+
     {
       title: "Robot Project6",
       thumbnail_description: "My 6th Robot Projecdt",

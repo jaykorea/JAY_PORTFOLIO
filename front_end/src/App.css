@@ -543,7 +543,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
 }
 .project-video {
-  width: 100%; /* Set the desired width for the video */
+  width: 80%; /* Set the desired width for the video */
   margin-bottom: 10px; /* Add margin to create spacing */
   display: block;
   margin: 0 auto;
