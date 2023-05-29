@@ -3,6 +3,7 @@ import { useState } from "react";
 import './css/modal-custom.css';
 
 export const ProjectCard_temp = ({ title, description, imgUrl }) => {
+
   return (
     <Col size={12} sm={6} md={4}>
       <div className="proj-imgbx">
@@ -16,8 +17,42 @@ export const ProjectCard_temp = ({ title, description, imgUrl }) => {
   )
 }
 
-
-export const ProjectCard = ({ title, thumbnail, thumbnail_description, videoUrl1, imgUrl1, imgUrl2, imgUrl3, imgUrl3_1, imgUrl3_2, imgUrl3_3, imgUrl4, imgUrl10, description1_title, description1_sub_title, description1, description2_title, description2_sub_title, description2, description3_title, description3_sub_title, description3_sub_title1, description3_sub_title2, description3, description3_1, description3_2, description4_title, description4_sub_title, description4, description10_title, description10_sub_title, description10 }) => {
+export const ProjectCard = ({ 
+  title, 
+  thumbnail, 
+  thumbnail_description, 
+  videoUrl1, video1_description, 
+  imgUrl1, 
+  imgUrl2, 
+  imgUrl3,
+  imgUrl3_description, 
+  imgUrl3_1, 
+  imgUrl3_2, 
+  imgUrl3_2_description, 
+  imgUrl3_3, 
+  imgUrl3_3_description,
+  imgUrl4,
+  imgUrl4_1, 
+  imgUrl4_description, 
+  imgUrl10, 
+  description1_title, 
+  description1_sub_title, 
+  description1, description2_title, 
+  description2_sub_title, 
+  description2, 
+  description3_title, 
+  description3_sub_title, 
+  description3_sub_title1, 
+  description3_sub_title2,
+  description3, description3_1, 
+  description3_2, 
+  description4_title, 
+  description4_sub_title, 
+  description4, 
+  description10_title, 
+  description10_sub_title, 
+  description10 
+}) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleModalShow = () => {
@@ -50,11 +85,12 @@ export const ProjectCard = ({ title, thumbnail, thumbnail_description, videoUrl1
               {description2_title && <h3>{description2_title}</h3>}
               {description2_sub_title && <h3>{description2_sub_title}</h3>}
               {videoUrl1 && (
-                <video className="project-video" controls autoPlay>
+                <video className="project-video" controls autoPlay onLoadedMetadata={(e) => {e.target.playbackRate = 1.5; }}>
                   <source src={videoUrl1} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               )}
+              {video1_description && <span_sub>{video1_description}</span_sub>}
               {imgUrl2 && <img src={imgUrl2} alt={title} />}
               {description2 && <span>{description2}</span>}
 
@@ -62,9 +98,10 @@ export const ProjectCard = ({ title, thumbnail, thumbnail_description, videoUrl1
                 {description3_sub_title && <h4>{description3_sub_title}</h4>}
                 {imgUrl3 && (
                   <div style={{ display: 'flex', justifyContent: 'center' }}>
-                    <img src={imgUrl3} alt={title} style={{ width: '98%', border: '1px solid rgba(0, 0, 0, 0.5)' }} />
+                    <img src={imgUrl3} alt={title} style={{ width: '95%', border: '1px solid rgba(0, 0, 0, 0.5)' }} />
                   </div>
                 )}
+                {imgUrl3_description && <span_sub>{imgUrl3_description}</span_sub>}
                 {description3 && <span>{description3}</span>}
                 {imgUrl3_1 && (
                   <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -74,9 +111,10 @@ export const ProjectCard = ({ title, thumbnail, thumbnail_description, videoUrl1
                 {description3_sub_title1 && <h4>{description3_sub_title1}</h4>}
                 {imgUrl3_2 && (
                   <div style={{ display: 'flex', justifyContent: 'center' }}>
-                    <img src={imgUrl3_2} alt={title} style={{ width: '70%', border: '1px solid rgba(0, 0, 0, 0.5)' }} />
+                    <img src={imgUrl3_2} alt={title} style={{ width: '65%', border: '1px solid rgba(0, 0, 0, 0.5)' }} />
                   </div>
                 )}
+                {imgUrl3_2_description && <span_sub>{imgUrl3_2_description}</span_sub>}
                 {description3_1 && <span>{description3_1}</span>}
                 {description3_sub_title2 && <h4>{description3_sub_title2}</h4>}
                 {imgUrl3_3 && (
@@ -84,7 +122,18 @@ export const ProjectCard = ({ title, thumbnail, thumbnail_description, videoUrl1
                     <img src={imgUrl3_3} alt={title} style={{ width: '90%', border: '1px solid rgba(0, 0, 0, 0.5)' }} />
                   </div>
                 )}
+                {imgUrl3_3_description && <span_sub>{imgUrl3_3_description}</span_sub>}
                 {description3_2 && <span>{description3_2}</span>}
+
+                {description4_title && <h3>{description4_title}</h3>}
+                {description4_sub_title && <h4>{description4_sub_title}</h4>}
+                {imgUrl4 && (
+                  <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img src={imgUrl4} alt={title} style={{ width: '95%', border: '1px solid rgba(0, 0, 0, 0.5)' }} />
+                  </div>
+                )}
+                {imgUrl4_description && <span_sub>{imgUrl4_description}</span_sub>}
+                {description4 && <span>{description4}</span>}
 
 
               {description10_title && <h3>{description10_title}</h3>}

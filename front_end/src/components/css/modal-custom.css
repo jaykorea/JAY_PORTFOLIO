@@ -1,13 +1,14 @@
 .modal-dialog {
-  margin-top: 12vh;
-  max-width: 145vh; /* Set the maximum width of the modal dialog */
+  margin-top: 10vh;
+  max-width: 80vw; /* Set the maximum width of the modal dialog */
   width: auto; /* Set the width of the modal dialog */
-  max-height: 90vh; /* Set the maximum height of the modal dialog to 90% of the viewport height */
+  max-height: 130vh; /* Set the maximum height of the modal dialog to 90% of the viewport height */
   height: auto; /* Let the height adjust based on content */
   display: flex;
   align-items: center;
   justify-content: center;
   color: black; /* Set the text color to black */
+  overflow-y: auto;
 }
 
 .modal-header {
@@ -16,47 +17,54 @@
 }
 
 .modal-title h2 {
-  font-size: 24px; /* Set the font size of the span element */
-  margin-left: 1%;
-  margin-right: 1%;
-  width: 100%;
+  font-size: 28px; /* Set the font size of the span element */
+  width: auto;
+  padding-left: 14vw;
+  padding-right: 14vw;
 }
 
 .modal-body{
   max-height: calc(100vh - 270px);
   overflow-y: auto;
+  padding-left: 15vw;
+  padding-right: 15vw;
 }
-
 .modal-body img {
   overflow-y: auto;
-  margin-top: 10px; /* Set the top margin of the image */
-  margin-bottom: 10px; /* Set the bottom margin of the image */
 }
 .modal-body h2 {
-  font-size: 22px; /* Set the font size of the span element */
+  font-size: 26px; /* Set the font size of the span element */
   margin: 10px 0;
-  margin-left: 1%;
-  margin-right: 1%;
 }
 .modal-body h3 {
-  font-size: 20px; /* Set the font size of the span element */
+  font-size: 24px; /* Set the font size of the span element */
   margin: 20px 0;
-  margin-left: 1%;
-  margin-right: 1%;
 }
 .modal-body h4 {
-  font-size: 18px; /* Set the font size of the span element */
+  font-size: 22px; /* Set the font size of the span element */
   margin: 20px 0;
-  margin-left: 1%;
-  margin-right: 1%;
 }
 .modal-body span {
-  font-size: 16px; /* Set the font size of the span element */
-  align-items: center;
-  display: flex;
-  margin-left: 0.5%;
-  margin-right: 0.5%;
+  font-size: 20px; /* Set the font size of the span element */
   margin-bottom: 0.5%;
+  display: block;
+}
+
+.modal-body span_sub {
+  font-size: 18px; /* Set the font size of the span element */
+  margin-top:1%;
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: center; /* Align the text horizontally at the center */
+  align-items: center; /* Align the text vertically at the center */
+}
+
+.modal-body .number-section {
+  font-weight: bold;
+}
+
+.modal-body .number-section2 {
+  font-weight:500;
 }
 /************ Modal Css ************/
 /* 
