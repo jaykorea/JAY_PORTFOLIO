@@ -1,7 +1,7 @@
 import { Col, Modal, Button} from "react-bootstrap";
 import { useState } from "react";
 import './css/modal-custom.css';
-import ReactPlayer from 'react-player';
+import ReactPlayer from 'react-player/youtube';
 
 export const ProjectCard_temp = ({ title, description, imgUrl }) => {
 
