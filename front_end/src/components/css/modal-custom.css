@@ -1,8 +1,8 @@
 .modal-dialog {
-  margin-top: 10vh;
+  margin-top: 13vh;
   max-width: 80vw; /* Set the maximum width of the modal dialog */
   width: auto; /* Set the width of the modal dialog */
-  max-height: 130vh; /* Set the maximum height of the modal dialog to 90% of the viewport height */
+  max-height: 90vh; /* Set the maximum height of the modal dialog to 90% of the viewport height */
   height: auto; /* Let the height adjust based on content */
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@
 }
 
 .modal-body{
-  max-height: calc(100vh - 270px);
+  max-height: calc(100vh - 300px);
   overflow-y: auto;
   padding-left: 15vw;
   padding-right: 15vw;
@@ -51,7 +51,7 @@
 }
 
 .modal-body span_sub {
-  font-size: 18px; /* Set the font size of the span element */
+  font-size: 16px; /* Set the font size of the span element */
   margin-top:1%;
   margin-bottom: 1%;
   display: flex;

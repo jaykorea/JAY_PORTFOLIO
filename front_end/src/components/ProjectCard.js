@@ -1,6 +1,7 @@
 import { Col, Modal, Button} from "react-bootstrap";
 import { useState } from "react";
 import './css/modal-custom.css';
+import ReactPlayer from 'react-player';
 
 export const ProjectCard_temp = ({ title, description, imgUrl }) => {
 
@@ -84,11 +85,20 @@ export const ProjectCard = ({
 
               {description2_title && <h3>{description2_title}</h3>}
               {description2_sub_title && <h3>{description2_sub_title}</h3>}
-              {videoUrl1 && (
+              {/* {videoUrl1 && (
                 <video className="project-video" controls autoPlay onLoadedMetadata={(e) => {e.target.playbackRate = 1.5; }}>
                   <source src={videoUrl1} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
+              )} */}
+              {videoUrl1 && (
+              <ReactPlayer
+                className="project-video"
+                url={videoUrl1}
+                controls
+                playing
+                playbackRate={1.5}
+              />
               )}
               {video1_description && <span_sub>{video1_description}</span_sub>}
               {imgUrl2 && <img src={imgUrl2} alt={title} />}

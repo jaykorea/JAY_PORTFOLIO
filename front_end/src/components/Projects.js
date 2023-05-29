@@ -1,5 +1,6 @@
 import { Container, Row, Col, Tab, Nav} from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
+import ReactPlayer from 'react-player';
 import projImg1 from "../assets/img/forth project.jpg";
 import projImg2 from "../assets/img/second work.jpg";
 import projImg3 from "../assets/img/project1.jpg";
@@ -158,10 +159,18 @@ export const Projects = () => {
           <img src={obstacle_ground_detector} style={{ width: '100%', border: '1px solid rgba(0, 0, 0, 0.5)' }} />
         </div>
         <span_sub>[Process 3D object data based on RGBD image]</span_sub>
-        <video className="project-video" controls autoPlay onLoadedMetadata={(e) => {e.target.playbackRate = 1.25; }}>
+        {/* <video className="project-video" controls playing onLoadedMetadata={(e) => {e.target.playbackRate = 1.25; }}>
           <source src={voxel_filter_video} type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
+        <ReactPlayer
+            className="project-video"
+            url={voxel_filter_video}
+            controls
+            playing
+            playbackRate={1.75}
+            width="65%" // Set the desired width, such as "500px" or "50%"
+          />
         <span_sub>[Filterd voxel and generated costmap]</span_sub>
         <span className="number-section2">● Trajectory Planning node</span>
         - GPP : I configure the global planner with dlux_global_planner based on A* algorithm and adjust path caching method to reduce computational resource.
@@ -188,10 +197,17 @@ export const Projects = () => {
         - To enhace the performance of localization and reduce the computational resource, operated it with CUDA for accelerating the computation time and increase the maximum particles parameter.
         <br/>
         <span dangerouslySetInnerHTML={{ __html: "You can find the parameter configuration <a href='https://github.com/jaykorea/fw_docker_compose_wheelchair/blob/main/docker_carto/launch/fw_navigation/launch/fw_amcl.launch' style='margin-left: 4px; margin-right: 4px; font-size:19px'>here</a> as well as CUDA supported AMCL package on this github <a href='https://github.com/atinfinity/amcl' style='margin-left: 5px; margin-right: 5px; font-size:19px'>repo.</a>" }} /> 
-        <video className="project-video" controls autoPlay onLoadedMetadata={(e) => {e.target.playbackRate = 1.75; }}>
+        {/* <video className="project-video" controls autoPlay onLoadedMetadata={(e) => {e.target.playbackRate = 1.75; }}>
           <source src={localization_video} type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
+        <ReactPlayer
+            className="project-video"
+            url={localization_video}
+            controls
+            playing
+            playbackRate={1.75}
+          />
         <span_sub>[Demonstration of Localization based on CUDA support AMCL]</span_sub>
         <br/>
         <span className="number-section">4. Vehicle Motion Controller node</span>
