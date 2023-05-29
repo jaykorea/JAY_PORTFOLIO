@@ -113,7 +113,7 @@ export const Projects = () => {
           - It processes control of LED(WS2812 chip), Joystick, Ultra sonar and interrupt handling(emergency button, control button).
           <br/>
           - It interfaces with the server through UART TTL to USB communication, ensuring reliable data exchange and control between the robot and the server.<br />
-          <span dangerouslySetInnerHTML={{ __html: "- You can check out the firmware code <a href='https://github.com/jaykorea/freeway_firmware_rev00' style='margin-left: 5px; margin-right: 5px; font-size:19px'>here</a>." }} />
+          <span dangerouslySetInnerHTML={{ __html: "- You can check out the firmware code <a href='https://github.com/jaykorea/freeway_firmware_rev00' style='margin-left: 5px; margin-right: 5px; font-size:1.0em'>here</a>." }} />
           <br />
           <span className="number-section">3. 2D LiDAR</span>
           - LakiBeam LiDAR: It is utilized for calculating the time to collision (TTC) and transmitting relevant data to the safety control node. It plays a crucial role in assessing the proximity and potential collision risks with detected objects in real-time.<br />
@@ -151,10 +151,12 @@ export const Projects = () => {
         - To estimate the robot position in local frame, I increase the orientation covariance of IMU data to ignore yaw angle drift when the robot is stationary<br/>
         <br/>
         <span className="number-section">2. Robot navigtaion node</span>
-        <span dangerouslySetInnerHTML={{ __html: "I configured it with <a href='https://github.com/magazino/move_base_flex' style='margin-left: 5px; margin-right: 5px; font-size:19px'>move_base_flex </a>ros navigation library. You can check out further parameter configuration  <a href='https://github.com/jaykorea/fw_docker_compose_wheelchair/blob/main/docker_carto/launch/fw_navigation/launch/fw_move_base_flex.launch' style='margin-left: 5px; margin-right: 5px; font-size:19px'>here</a>." }} />
+        <span dangerouslySetInnerHTML={{ __html: "I configured it with <a href='https://github.com/magazino/move_base_flex' style='margin-left: 5px; margin-right: 5px; font-size:1.0em'>move_base_flex </a>ros navigation library. You can check out further parameter configuration  <a href='https://github.com/jaykorea/fw_docker_compose_wheelchair/blob/main/docker_carto/launch/fw_navigation/launch/fw_move_base_flex.launch' style='margin-left: 5px; margin-right: 5px; font-size:1.0em'>here</a>." }} />
         <br/>
-        <span className="number-section2">● Costmap generation node</span>
+        <span className="number-section2">* Costmap generation node</span>
         - To process 3D object based costmap, I've downsampled the voxel size(0.05m) and segmented as obstacle and ground to reduce the computational resource.
+        <br/>
+        <br/>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <img src={obstacle_ground_detector} style={{ width: '100%', border: '1px solid rgba(0, 0, 0, 0.5)' }} />
         </div>
@@ -171,16 +173,16 @@ export const Projects = () => {
             playbackRate={1.5}
           />
         <span_sub>[Filterd voxel and generated costmap]</span_sub>
-        <span className="number-section2">● Trajectory Planning node</span>
+        <span className="number-section2">* Trajectory Planning node</span>
         - GPP : I configure the global planner with dlux_global_planner based on A* algorithm and adjust path caching method to reduce computational resource.
-        <span dangerouslySetInnerHTML={{ __html: "You can find the parameter configuration <a href='https://github.com/jaykorea/fw_docker_compose_wheelchair/blob/main/docker_carto/launch/fw_navigation/param/planners.yaml' style='margin-left: 4px; margin-right: 4px; font-size:19px'>here.</a>" }} />
+        <span dangerouslySetInnerHTML={{ __html: "You can find the parameter configuration <a href='https://github.com/jaykorea/fw_docker_compose_wheelchair/blob/main/docker_carto/launch/fw_navigation/param/planners.yaml' style='margin-left: 4px; margin-right: 4px; font-size:1.0em'>here.</a>" }} />
         - LPP: I configure the local planner with teb_local_planner based on time elastic band algorithm and modified checking feasibility part to prevent the robot oscillating on specific circumstance(path-blocked).
-        <span dangerouslySetInnerHTML={{ __html: "You can find the parameter configuration <a href='https://github.com/jaykorea/fw_docker_compose_wheelchair/blob/main/docker_carto/launch/fw_navigation/param/controllers.yaml' style='margin-left: 4px; margin-right: 4px; font-size:19px'>here</a> as well as modified code on my <a href='https://github.com/jaykorea/teb_local_planner_feasibility_check/blob/main/src/teb_local_planner_ros.cpp' style='margin-left: 5px; margin-right: 5px; font-size:19px'>github.</a>" }} /> 
+        <span dangerouslySetInnerHTML={{ __html: "You can find the parameter configuration <a href='https://github.com/jaykorea/fw_docker_compose_wheelchair/blob/main/docker_carto/launch/fw_navigation/param/controllers.yaml' style='margin-left: 4px; margin-right: 4px; font-size:1.0em'>here</a> as well as modified code on my <a href='https://github.com/jaykorea/teb_local_planner_feasibility_check/blob/main/src/teb_local_planner_ros.cpp' style='margin-left: 5px; margin-right: 5px; font-size:1.0em'>github.</a>" }} /> 
         <br/>
         <span className="number-section">3. SLAM node</span>
         I configured the SLAM node with 'Cartographer' to generate occupancy map, 'map server' to serve the generated map and AMCL for the robot to localize in frame.
         <br/><br/>
-        <span className="number-section2">● Map server node</span>
+        <span className="number-section2">* Map server node</span>
         - Basically, the map is generated by Cartographer with scan-matching algorithm.
         <br/>
         - Map server node serves the map into 2 divided map that is 'map' and 'map_raw'.
@@ -190,12 +192,12 @@ export const Projects = () => {
         - 'map_raw' is the raw format of the generated map, which serves the AMCL node.
         <br/>
         <br/>
-        <span className="number-section2">● AMCL node</span>
+        <span className="number-section2">* AMCL node</span>
         - For robot to localize in map frame(regarding to odom frame), I implemented AMCL algorithm.
         <br/>
         - To enhace the performance of localization and reduce the computational resource, operated it with CUDA for accelerating the computation time and increase the maximum particles parameter.
         <br/>
-        <span dangerouslySetInnerHTML={{ __html: "You can find the parameter configuration <a href='https://github.com/jaykorea/fw_docker_compose_wheelchair/blob/main/docker_carto/launch/fw_navigation/launch/fw_amcl.launch' style='margin-left: 4px; margin-right: 4px; font-size:19px'>here</a> as well as CUDA supported AMCL package on this github <a href='https://github.com/atinfinity/amcl' style='margin-left: 5px; margin-right: 5px; font-size:19px'>repo.</a>" }} /> 
+        <span dangerouslySetInnerHTML={{ __html: "You can find the parameter configuration <a href='https://github.com/jaykorea/fw_docker_compose_wheelchair/blob/main/docker_carto/launch/fw_navigation/launch/fw_amcl.launch' style='margin-left: 4px; margin-right: 4px; font-size:1.0em'>here</a> as well as CUDA supported AMCL package on this github <a href='https://github.com/atinfinity/amcl' style='margin-left: 5px; margin-right: 5px; font-size:1.0em'>repo.</a>" }} /> 
         {/* <video className="project-video" controls autoPlay onLoadedMetadata={(e) => {e.target.playbackRate = 1.75; }}>
           <source src={localization_video} type="video/mp4" />
           Your browser does not support the video tag.
@@ -213,7 +215,7 @@ export const Projects = () => {
         On this node, It multiplexes the command velocity generated by LPP, Teleop, Joystick and emergency stop velocity generated by safety node.
         <br/>
         <br/>
-        <span className="number-section2">● Safety controller node</span>
+        <span className="number-section2">* Safety controller node</span>
         - It generate command velocity to stop or slow down the robot depending on each zone.
         <br/>
         <br/>
@@ -229,9 +231,9 @@ export const Projects = () => {
         </div>
         <span_sub>[Processing block of safety controller node]</span_sub>
         - Depending on each parameter, it can be configured of the detecting zone and sensitivity of detecting the objects.
-        <span dangerouslySetInnerHTML={{ __html: "- You can find the detailed parameter configuration on my <a href='https://github.com/jaykorea/fw_docker_compose_wheelchair/blob/main/docker_carto/launch/fw_ttc/config/fw_ttc_params.yaml' style='margin-left: 4px; margin-right: 4px; font-size:19px'>github</a> as well as calculating <a href='https://github.com/jaykorea/fw_rev_04_for_wheelchair/blob/main/fw_ttc/src/lidar_ttc.cpp' style='margin-left: 5px; margin-right: 5px; font-size:19px'>ttc node code</a> and <a href='https://github.com/jaykorea/fw_rev_04_for_wheelchair/blob/main/fw_safety/src/safety_controller.cpp' style='margin-left: 5px; margin-right: 5px; font-size:19px'>safety node code</a>here." }} /> 
+        <span dangerouslySetInnerHTML={{ __html: "- You can find the detailed parameter configuration on my <a href='https://github.com/jaykorea/fw_docker_compose_wheelchair/blob/main/docker_carto/launch/fw_ttc/config/fw_ttc_params.yaml' style='margin-left: 4px; margin-right: 4px; font-size:1.0em'>github</a> as well as calculating <a href='https://github.com/jaykorea/fw_rev_04_for_wheelchair/blob/main/fw_ttc/src/lidar_ttc.cpp' style='margin-left: 5px; margin-right: 5px; font-size:1.0em'>ttc node code</a> and <a href='https://github.com/jaykorea/fw_rev_04_for_wheelchair/blob/main/fw_safety/src/safety_controller.cpp' style='margin-left: 5px; margin-right: 5px; font-size:1.0em'>safety node code</a>here." }} /> 
         <br/>
-        <span className="number-section2">● Command velocity multiplexing node</span>
+        <span className="number-section2">* Command velocity multiplexing node</span>
         - Based on the generated multiple command velocity, the mux node deals with the multiple command velocity.
         <br/>
         <br/>
@@ -242,9 +244,9 @@ export const Projects = () => {
         - Command velocity generated by each 'Teleop', 'Joystick', 'LPP', 'Safety' server is smoothed by velocity smoother node and transmit to mux node.
         <br/>
         - Based on the priority of each commands, it outputs to the Low-level Controller node.
-        <span dangerouslySetInnerHTML={{ __html: "- You can find the detailed parameter configuration for the mux node on my <a href='https://github.com/jaykorea/fw_docker_compose_wheelchair/blob/main/docker_carto/launch/yocs_cmd_vel_mux/param/example.yaml' style='margin-left: 4px; margin-right: 4px; font-size:19px'>github.</a>" }} /> 
+        <span dangerouslySetInnerHTML={{ __html: "- You can find the detailed parameter configuration for the mux node on my <a href='https://github.com/jaykorea/fw_docker_compose_wheelchair/blob/main/docker_carto/launch/yocs_cmd_vel_mux/param/example.yaml' style='margin-left: 4px; margin-right: 4px; font-size:1.0em'>github.</a>" }} /> 
         <br/>
-        <span className="number-section2">● Occupant sensitive intent recognition parsing node</span>
+        <span className="number-section2">* Occupant sensitive intent recognition parsing node</span>
         - Main goal of developing this robot is to implement interface of robot with occupant.
         <br/>
         <br/>
@@ -270,13 +272,13 @@ export const Projects = () => {
         <span_sub>[Processing blocks of transmiting control adjustment parameters to LPP dynamic parameter server]</span_sub>
         - To reduce the noise of the parsed data, it is filtered by MAF(Moving Average Filter) and it stores on the array to 'Hash' flag.
         <br/>
-        <span dangerouslySetInnerHTML={{ __html: "- You can check out the code on my <a href='https://github.com/jaykorea/protocol_tester_parser/tree/modified' style='margin-left: 4px; margin-right: 4px; font-size:19px'>github repo</a>here." }} /> 
+        <span dangerouslySetInnerHTML={{ __html: "- You can check out the code on my <a href='https://github.com/jaykorea/protocol_tester_parser/tree/modified' style='margin-left: 4px; margin-right: 4px; font-size:1.0em'>github repo</a>here." }} /> 
     
         </span>
       ),
       description10_title: "Further Information",
       description10: (
-        <span dangerouslySetInnerHTML={{ __html: "For more details and the ROS setup to perform the robot server, please refer to my <a href='https://github.com/jaykorea/fw_rev_04_for_wheelchair' style='margin-left: 5px; margin-right: 5px; font-size:19px'>github</a> link." }} />
+        <span dangerouslySetInnerHTML={{ __html: "For more details and the ROS setup to perform the robot server, please refer to my <a href='https://github.com/jaykorea/fw_rev_04_for_wheelchair' style='margin-left: 5px; margin-right: 5px; font-size:1.0em'>github</a> link." }} />
       ),
     },
 

@@ -100,7 +100,7 @@ export const ProjectCard = ({
                 playbackRate={1.25}
               />
               )}
-              {video1_description && <span_sub>{video1_description}</span_sub>}
+              {video1_description && <span_sub fontSize='18px'>{video1_description}</span_sub>}
               {imgUrl2 && <img src={imgUrl2} alt={title} />}
               {description2 && <span>{description2}</span>}
 
