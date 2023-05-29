@@ -94,7 +94,7 @@ export const ProjectCard = ({
               {videoUrl1 && (
               <ReactPlayer
                 className="project-video"
-                url='https://youtu.be/D2tSbLXXLC4'
+                url='https://youtu.be/ZFGxTAT8I4o'
                 controls
                 playing
                 playbackRate={1.25}

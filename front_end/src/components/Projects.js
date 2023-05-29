@@ -169,7 +169,6 @@ export const Projects = () => {
             controls
             playing
             playbackRate={1.5}
-            width="65%" // Set the desired width, such as "500px" or "50%"
           />
         <span_sub>[Filterd voxel and generated costmap]</span_sub>
         <span className="number-section2">● Trajectory Planning node</span>
