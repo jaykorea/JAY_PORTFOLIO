@@ -94,10 +94,10 @@ export const ProjectCard = ({
               {videoUrl1 && (
               <ReactPlayer
                 className="project-video"
-                url={videoUrl1}
+                url='https://youtu.be/D2tSbLXXLC4'
                 controls
                 playing
-                playbackRate={1.5}
+                playbackRate={1.25}
               />
               )}
               {video1_description && <span_sub>{video1_description}</span_sub>}

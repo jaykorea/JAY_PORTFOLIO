@@ -1,6 +1,6 @@
 import { Container, Row, Col, Tab, Nav} from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import ReactPlayer from 'react-player';
+import ReactPlayer from 'react-player/youtube';
 import projImg1 from "../assets/img/forth project.jpg";
 import projImg2 from "../assets/img/second work.jpg";
 import projImg3 from "../assets/img/project1.jpg";
@@ -165,10 +165,10 @@ export const Projects = () => {
         </video> */}
         <ReactPlayer
             className="project-video"
-            url={voxel_filter_video}
+            url='https://youtu.be/FV2hLd3USC8'
             controls
             playing
-            playbackRate={1.75}
+            playbackRate={1.5}
             width="65%" // Set the desired width, such as "500px" or "50%"
           />
         <span_sub>[Filterd voxel and generated costmap]</span_sub>
@@ -203,10 +203,10 @@ export const Projects = () => {
         </video> */}
         <ReactPlayer
             className="project-video"
-            url={localization_video}
+            url='https://youtu.be/Jyp0jCpGtwY'
             controls
             playing
-            playbackRate={1.75}
+            playbackRate={1.5}
           />
         <span_sub>[Demonstration of Localization based on CUDA support AMCL]</span_sub>
         <br/>
