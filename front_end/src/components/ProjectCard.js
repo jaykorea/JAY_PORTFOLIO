@@ -2,23 +2,9 @@ import { Col, Modal, Button} from "react-bootstrap";
 import { useState } from "react";
 import './css/modal-custom.css';
 
-export const ProjectCard_temp = ({ title, description, imgUrl }) => {
-
-  return (
-    <Col size={12} sm={6} md={4}>
-      <div className="proj-imgbx">
-        <img src={imgUrl} />
-        <div className="proj-txtx">
-          <h4>{title}</h4>
-          <span>{description}</span>
-        </div>
-      </div>
-    </Col>
-  )
-}
-
 export const ProjectCard = ({ 
   title, 
+  thumbnail_title,
   thumbnail, 
   thumbnail_description, 
   main_body,
@@ -36,9 +22,9 @@ export const ProjectCard = ({
   return (
     <Col xs={12} sm={6} md={4}>
       <div className="proj-imgbx" onClick={handleModalShow}>
-        <img src={thumbnail} alt={title} />
+        <img src={thumbnail} alt={thumbnail_title} />
         <div className="proj-txtx">
-          <h4>{title}</h4>
+          <h4>{thumbnail_title}</h4>
           <span>{thumbnail_description}</span>
         </div>
       </div>
