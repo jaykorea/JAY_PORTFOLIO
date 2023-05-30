@@ -8,7 +8,7 @@
   justify-content: center;
   color: black; /* Set the text color to black */
   overflow-y: hidden;
-  font-size: 87%;
+  font-size: 75%;
 }
 
 .modal-header {
@@ -17,7 +17,7 @@
 }
 
 .modal-title h2 {
-  font-size: 1.1em; /* Set the font size of the span element */
+  font-size: 1.4em; /* Set the font size of the span element */
   width: auto;
   padding-left: 14vw;
   padding-right: 14vw;
@@ -34,7 +34,7 @@
   overflow-y: auto;
 }
 .modal-body h2 {
-  font-size: 1.6em; /* Adjust the value as needed */
+  font-size: 1.8em; /* Adjust the value as needed */
   margin: 10px 0;
 }
 .modal-body h3 {
@@ -42,16 +42,20 @@
   margin: 20px 0;
 }
 .modal-body h4 {
-  font-size: 1.4em; /* Set the font size of the span element */
+  font-size: 1.3em; /* Set the font size of the span element */
   margin: 20px 0;
 }
 .modal-body span {
-  font-size: 1.1em; /* Set the font size of the span element */
-  margin-bottom: 0.5%;
+  font-size: 1.2em; /* Set the font size of the span element */
   display: block;
 }
-.modal-body span_sub {
-  font-size: 1.1em; /* Set the font size of the span element */
+
+.modal-body span > span_html{
+  /* text-decoration: underline; */
+  display: block;
+}
+.modal-body span > span_sub {
+  font-size: 1.0em; /* Set the font size of the span element */
   margin-top:1%;
   margin-bottom: 1%;
   display: flex;
@@ -59,12 +63,15 @@
   align-items: center; /* Align the text vertically at the center */
 }
 
-.modal-body .number-section {
+.modal-body span > span_number-section{
+  font-size: 1.0em;
   font-weight: bold;
+  display: block;
 }
-
-.modal-body .number-section2 {
+.modal-body span > span_number-section2{
+  font-size: 1.0em;
   font-weight:500;
+  display: block;
 }
 /************ Modal Css ************/
 /* 
