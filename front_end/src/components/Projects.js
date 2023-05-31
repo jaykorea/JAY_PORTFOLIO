@@ -21,6 +21,7 @@ import multiplexing from "../assets/img/robot/multiplexing.png";
 import hmi from "../assets/img/robot/hmi.png";
 import logic_controller from "../assets/img/robot/logic_controller.png"
 import parsing_node from "../assets/img/robot/parsing_node.png"
+import simulation_setup from "../assets/img/robot/simulation_setup.png"
 import graph_frame from "../assets/img/robot/graph_frame.png"
 
 import robotImg2 from "../assets/img/del_bot.png";
@@ -89,7 +90,23 @@ const VideoComponent_localization = () => {
     </div>
   );
 };
-  
+
+const VideoComponent_parsing_node_simulation = () => {
+  const [ref, inView] = useInView({ triggerOnce: true });
+
+  return (
+    <div ref={ref}>
+        <ReactPlayer
+        className="project-video"
+        url='https://youtu.be/o-gC5amo6ek'
+        controls
+        playing={inView}
+        playbackRate={1.5}
+      />
+    </div>
+  );
+};
+
 export const Projects = () => {
 
   const title = "Development of Personal Autonomous Wheelchair";
@@ -231,6 +248,7 @@ export const Projects = () => {
           <source src={localization_video} type="video/mp4" />
           Your browser does not support the video tag.
         </video> */}
+        <br/>
         <VideoComponent_localization/>
         <span_sub>[Demonstration of Localization based on CUDA support AMCL]</span_sub>
         <br/>
@@ -297,6 +315,29 @@ export const Projects = () => {
         <br/>
         <span_html dangerouslySetInnerHTML={{ __html: "- You can check out the code on my <a href='https://github.com/jaykorea/protocol_tester_parser/tree/modified' style='margin-left: 4px; margin-right: 4px; font-size:1.0em'>github repo</a>here." }} /> 
         <br/>
+        - I've tested on simulation environment
+        <br/>
+        <br/>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <img src={simulation_setup} alt={title} style={{ width: '70%', border: '1px solid rgba(0, 0, 0, 0.5)' }} />
+        </div>
+        <span_sub>[H/W configuration for Simulation]</span_sub>
+        - simply divided into 3 blocks
+        <br/>
+        - Data transmit through uart on ttl level(simple serial communication)
+        <br/>
+        - Data formatted as an array
+        <br/>
+        <br/>
+        <VideoComponent_parsing_node_simulation/>
+        <span_sub>[Simulation result based on hash flag]</span_sub>
+        - Simulated data transmitted regarding the 5 specific scenario to satisfy 'hash 1 ~ hash5' trigger circumstances
+        <br/>
+        - I temporally set hash 4,5 trigger as stop signal
+        <br/>
+        - Once the hash4 and 5 triggered, robot pauses
+        <br/>
+        <span_html dangerouslySetInnerHTML={{ __html: "- You can check out the simulated data code on my <a href='https://github.com/jaykorea/protocol_tester_parser/blob/modified/mega_serialtester/mega_serialtester.ino' style='margin-left: 4px; margin-right: 4px; font-size:1.0em'>github repo</a>here." }} /> 
         <h4>⦁ Graph & Frame Definition</h4>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <img src={graph_frame} alt={title} style={{ width: '80%', border: '1px solid rgba(0, 0, 0, 0.5)' }} />
@@ -520,6 +561,7 @@ export const Projects = () => {
         <span_sub>[Processing blocks of transmiting control adjustment parameters to LPP dynamic parameter server]</span_sub>
         - To reduce the noise of the parsed data, it is filtered by MAF(Moving Average Filter) and it stores on the array to 'Hash' flag.
         <br/>
+        <span_number-section2>* Simulation test</span_number-section2>
         <span_html dangerouslySetInnerHTML={{ __html: "- You can check out the code on my <a href='https://github.com/jaykorea/protocol_tester_parser/tree/modified' style='margin-left: 4px; margin-right: 4px; font-size:1.0em'>github repo</a>here." }} /> 
         <br/>
         <h4>⦁ Graph & Frame Definition</h4>

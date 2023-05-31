@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.d2d147e1.css",
-    "main.js": "/static/js/main.0c81c832.js",
+    "main.js": "/static/js/main.27985f14.js",
     "static/js/787.fb771931.chunk.js": "/static/js/787.fb771931.chunk.js",
     "static/media/mechanical_design.png": "/static/media/mechanical_design.ed4ff90c9e957622d1ad.png",
     "static/media/color-sharp.png": "/static/media/color-sharp.bea361cfef80fefc2d1e.png",
     "static/media/color-sharp2.png": "/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
     "static/media/computing_sensors.png": "/static/media/computing_sensors.7c99946285a48d32eba4.png",
     "static/media/graph_frame.png": "/static/media/graph_frame.d9cd3e41375396dcb9d3.png",
+    "static/media/simulation_setup.png": "/static/media/simulation_setup.abf3acbae8501a230663.png",
     "static/media/jay.png": "/static/media/jay.fdd45f91554fdb5f28c6.png",
     "static/media/hmi.png": "/static/media/hmi.98e8c38ed6ea32a0bb94.png",
     "static/media/freeway.png": "/static/media/freeway.1ea70cec02e5299f5def.png",
@@ -47,11 +48,11 @@
     "static/media/arrow1.svg": "/static/media/arrow1.1088f8313e5637897aff2414e5938141.svg",
     "static/media/nav-icon2.svg": "/static/media/nav-icon2.a39f0e5e47e442dafcc5c9c320f19f6f.svg",
     "main.d2d147e1.css.map": "/static/css/main.d2d147e1.css.map",
-    "main.0c81c832.js.map": "/static/js/main.0c81c832.js.map",
+    "main.27985f14.js.map": "/static/js/main.27985f14.js.map",
     "787.fb771931.chunk.js.map": "/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d2d147e1.css",
-    "static/js/main.0c81c832.js"
+    "static/js/main.27985f14.js"
   ]
 }
