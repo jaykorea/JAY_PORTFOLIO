@@ -9,7 +9,10 @@ import projImg4 from "../assets/img/first work.jpg";
 import projImg5 from "../assets/img/fifth work.jpg";
 import projImg6 from "../assets/img/12345.jpg";
 
-import robotImg1 from "../assets/img/freeway.png";
+import under_revision from "../assets/img/under_revision.png";
+import tbd from "../assets/img/tbd.png";
+
+import robotImg1 from "../assets/img/robot/freeway.png";
 import motor_calculation_selection from "../assets/img/robot/motor_calculation_selection.png";
 import computing_sensors from "../assets/img/robot/computing_sensors.png";
 import mechanical_design from "../assets/img/robot/mechanical_design.png";
@@ -24,7 +27,7 @@ import parsing_node from "../assets/img/robot/parsing_node.png"
 import simulation_setup from "../assets/img/robot/simulation_setup.png"
 import graph_frame from "../assets/img/robot/graph_frame.png"
 
-import robotImg2 from "../assets/img/del_bot.png";
+import robotImg2 from "../assets/img/robot/del_bot.png";
 
 import robotImg3 from "../assets/img/serv_bot1.png";
 
@@ -351,39 +354,32 @@ export const Projects = () => {
       )
     },
 
+// development of autonomous wheelchair
+
     {
-      title: "Robot Project2",
-      thumbnail_title: "Robot Project2",
-      thumbnail_description: "My 2nd Robot Projecdt",
+      title: "Development of Delivery Robot for General-purpose Environment",
+      thumbnail_title: "Autonomous Delivery Robot",
+      thumbnail_description: "Development of delivery robot that can be run on both in & outdoor environment",
       thumbnail: robotImg2,
 
       main_body: (
         <span>
         <h3>Overview</h3>
         <br/>
-        The inspiration behind this project stemmed from my passion for robotics and a desire to create a mobility solution that prioritizes both safety and personalization. I embarked on this endeavor to push the boundaries of autonomous navigation, integrating cutting-edge hardware and software technologies to enhance the overall user experience and make a positive impact on the lives of individuals with mobility challenges. Furthermore, I integrated the various driving logic with passensger intent recognition data processed with deeplearning network to operate HMI(Human Machine Interface) as well as satifying the safety function to keep the passensger safe from hazardous circumstances.
+        The development of a delivery robot for indoor and outdoor environments was a challenging and rewarding project. The main focus was on creating a robot that could navigate autonomously and efficiently deliver items in various environments. The development of this delivery robot demonstrates my expertise in robotics, autonomous navigation, and system integration. It showcases my ability to tackle complex challenges and deliver innovative solutions in the field of robotics and automation.
         <br/>
         <h3>Demo Video</h3>
-          <TrackVisibility>
-          {({ isVisible }) => (
-            <ReactPlayer
-            className="project-video"
-            url='https://youtu.be/ZFGxTAT8I4o'
-            controls
-            playing
-            playbackRate={1.25}
-          />
-          )}
-          </TrackVisibility>
+        <VideoComponent_demo/>
         <span_sub>[Demonstration of Route follow-up, obstacle avoidance, emergency stop]</span_sub>
         <h3>Hardware</h3>
+        The hardware section of the development of the delivery robot focused on equipping it with the necessary components to support its visual SLAM (Simultaneous Localization and Mapping) capabilities and ensure reliable and accurate navigation in both indoor and outdoor environments.
         <h4>⦁ Driving Unit</h4>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <img src={motor_calculation_selection} alt={title} style={{ width: '95%', border: '1px solid rgba(0, 0, 0, 0.5)' }} />
         </div>
         <span_sub>[Recommended stall torque and device selection]</span_sub>
         <br/>
-        - These calculations provide insights into the torque requirements and characteristics of the motor needed to meet the specified maximum weight, wheel radius, wheel diameter, and maximum speed of the system. 
+        - The driving unit of the delivery robot was designed to provide the necessary propulsion and control for its movement. The specific details of the driving unit, such as the type of motor and torque calculations, may vary based on the requirements of the robot and its payload capacity. However, it is essential to select motors with sufficient power and torque to meet the demands of the robot's weight and maneuverability.
         <br/>
         - Following the calculation of the required performance, I configured the driving unit with dual 'MDR200' and 'MD400T' of 'MD Robot' corporate.
         <br/>
@@ -580,7 +576,7 @@ export const Projects = () => {
     {
       title: "Robot Project3",
       thumbnail_description: "My 3rd Robot Projecdt",
-      thumbnail: robotImg3,
+      thumbnail: tbd,
       imgUrl1: robotImg3,
       imgUrl2: robotImg3,
       imgUrl3: robotImg3,
@@ -594,7 +590,7 @@ export const Projects = () => {
     {
       title: "Robot Project4",
       thumbnail_description: "My 4th Robot Projecdt",
-      thumbnail: robotImg4,
+      thumbnail: tbd,
       imgUrl1: robotImg4,
       imgUrl2: robotImg4,
       imgUrl3: robotImg4,
@@ -608,7 +604,7 @@ export const Projects = () => {
     {
       title: "Robot Project5",
       thumbnail_description: "My 5th Robot Projecdt",
-      thumbnail: robotImg5,
+      thumbnail: tbd,
       imgUrl1: robotImg5,
       imgUrl2: robotImg5,
       imgUrl3: robotImg5,
@@ -622,7 +618,7 @@ export const Projects = () => {
     {
       title: "Robot Project6",
       thumbnail_description: "My 6th Robot Projecdt",
-      thumbnail: robotImg6,
+      thumbnail: tbd,
       imgUrl1: robotImg6,
       imgUrl2: robotImg6,
       imgUrl3: robotImg6,
@@ -638,7 +634,7 @@ export const Projects = () => {
     {
       title: "R&D Project1",
       thumbnail_description: "My 1st R&D Project",
-      thumbnail: projImg1,
+      thumbnail: tbd,
       imgUrl1: projImg1,
       imgUrl2: projImg1,
       imgUrl3: projImg1,
@@ -651,7 +647,7 @@ export const Projects = () => {
     {
       title: "R&D Project2",
       thumbnail_description: "My 2nd R&D Project",
-      thumbnail: projImg2,
+      thumbnail: tbd,
       imgUrl1: projImg2,
       imgUrl2: projImg2,
       imgUrl3: projImg2,
@@ -664,7 +660,7 @@ export const Projects = () => {
     {
       title: "R&D Project3",
       thumbnail_description: "My 3rd R&D Project",
-      thumbnail: projImg3,
+      thumbnail: tbd,
       imgUrl1: projImg3,
       imgUrl2: projImg3,
       imgUrl3: projImg3,
@@ -677,7 +673,7 @@ export const Projects = () => {
     {
       title: "R&D Project4",
       thumbnail_description: "My 4th R&D Project",
-      thumbnail: projImg4,
+      thumbnail: tbd,
       imgUrl1: projImg4,
       imgUrl2: projImg4,
       imgUrl3: projImg4,
@@ -690,7 +686,7 @@ export const Projects = () => {
     {
       title: "R&D Project5",
       thumbnail_description: "My 5th R&D Project",
-      thumbnail: projImg5,
+      thumbnail: tbd,
       imgUrl1: projImg5,
       imgUrl2: projImg5,
       imgUrl3: projImg5,
@@ -703,7 +699,7 @@ export const Projects = () => {
     {
       title: "R&D Project6",
       thumbnail_description: "My 6th R&D Project",
-      thumbnail: projImg6,
+      thumbnail: tbd,
       imgUrl1: projImg6,
       imgUrl2: projImg6,
       imgUrl3: projImg6,
@@ -719,7 +715,7 @@ export const Projects = () => {
     {
       title: "IOT Project1",
       thumbnail_description: "My 1st IoT Project",
-      thumbnail: projImg1,
+      thumbnail: tbd,
       imgUrl1: projImg1,
       imgUrl2: projImg1,
       imgUrl3: projImg1,
@@ -732,7 +728,7 @@ export const Projects = () => {
     {
       title: "IOT Project2",
       thumbnail_description: "My 2nd IoT Project",
-      thumbnail: projImg2,
+      thumbnail: tbd,
       imgUrl1: projImg2,
       imgUrl2: projImg2,
       imgUrl3: projImg2,
@@ -745,7 +741,7 @@ export const Projects = () => {
     {
       title: "IOT Project3",
       thumbnail_description: "My 3rd IoT Project",
-      thumbnail: projImg3,
+      thumbnail: tbd,
       imgUrl1: projImg3,
       imgUrl2: projImg3,
       imgUrl3: projImg3,
@@ -758,7 +754,7 @@ export const Projects = () => {
     {
       title: "IOT Project4",
       thumbnail_description: "My 4th IoT Project",
-      thumbnail: projImg4,
+      thumbnail: tbd,
       imgUrl1: projImg4,
       imgUrl2: projImg4,
       imgUrl3: projImg4,
@@ -771,7 +767,7 @@ export const Projects = () => {
     {
       title: "IOT Project5",
       thumbnail_description: "My 5th IoT Project",
-      thumbnail: projImg5,
+      thumbnail: tbd,
       imgUrl1: projImg5,
       imgUrl2: projImg5,
       imgUrl3: projImg5,
@@ -784,7 +780,7 @@ export const Projects = () => {
     {
       title: "IOT Project6",
       thumbnail_description: "My 6th IoT Project",
-      thumbnail: projImg6,
+      thumbnail: tbd,
       imgUrl1: projImg6,
       imgUrl2: projImg6,
       imgUrl3: projImg6,
@@ -851,7 +847,6 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                       <Row>
                         {
                           iot.map((project, index) => {

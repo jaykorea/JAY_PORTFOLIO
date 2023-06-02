@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d2d147e1.css",
-    "main.js": "/static/js/main.27985f14.js",
+    "main.css": "/static/css/main.96582303.css",
+    "main.js": "/static/js/main.e07fd799.js",
     "static/js/787.fb771931.chunk.js": "/static/js/787.fb771931.chunk.js",
     "static/media/mechanical_design.png": "/static/media/mechanical_design.ed4ff90c9e957622d1ad.png",
     "static/media/color-sharp.png": "/static/media/color-sharp.bea361cfef80fefc2d1e.png",
@@ -11,9 +11,9 @@
     "static/media/simulation_setup.png": "/static/media/simulation_setup.abf3acbae8501a230663.png",
     "static/media/jay.png": "/static/media/jay.fdd45f91554fdb5f28c6.png",
     "static/media/hmi.png": "/static/media/hmi.98e8c38ed6ea32a0bb94.png",
-    "static/media/freeway.png": "/static/media/freeway.1ea70cec02e5299f5def.png",
-    "static/media/del_bot.png": "/static/media/del_bot.3fc470edae9c7117b87e.png",
+    "static/media/freeway.png": "/static/media/freeway.41952d09e37c9b967db5.png",
     "static/media/logic_controller.png": "/static/media/logic_controller.49d3b92887b35e2bd5ee.png",
+    "static/media/del_bot.png": "/static/media/del_bot.c142599ed8042d08fe49.png",
     "static/media/safety_zone.png": "/static/media/safety_zone.7d6e0aa9937380cb210e.png",
     "static/media/serv_bot1.png": "/static/media/serv_bot1.d1e99dd718fa0d7af83e.png",
     "static/media/motor_calculation_selection.png": "/static/media/motor_calculation_selection.032fb3eeb2326ca2b94d.png",
@@ -33,6 +33,8 @@
     "static/media/project1.jpg": "/static/media/project1.6259e0ebdec49196168e.jpg",
     "static/media/forth project.jpg": "/static/media/forth project.90c863af83f18b02c00a.jpg",
     "static/media/odina2.png": "/static/media/odina2.a89694ad752ceadab471.png",
+    "static/media/under_revision.png": "/static/media/under_revision.7be26115be02eba744d8.png",
+    "static/media/tbd.png": "/static/media/tbd.6c0110cbd9d817e7acba.png",
     "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/fifth work.jpg": "/static/media/fifth work.71144293371d30367ff8.jpg",
@@ -47,12 +49,12 @@
     "static/media/arrow2.svg": "/static/media/arrow2.b3d03e1b04ec1904a5658aea5776433c.svg",
     "static/media/arrow1.svg": "/static/media/arrow1.1088f8313e5637897aff2414e5938141.svg",
     "static/media/nav-icon2.svg": "/static/media/nav-icon2.a39f0e5e47e442dafcc5c9c320f19f6f.svg",
-    "main.d2d147e1.css.map": "/static/css/main.d2d147e1.css.map",
-    "main.27985f14.js.map": "/static/js/main.27985f14.js.map",
+    "main.96582303.css.map": "/static/css/main.96582303.css.map",
+    "main.e07fd799.js.map": "/static/js/main.e07fd799.js.map",
     "787.fb771931.chunk.js.map": "/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2d147e1.css",
-    "static/js/main.27985f14.js"
+    "static/css/main.96582303.css",
+    "static/js/main.e07fd799.js"
   ]
 }
