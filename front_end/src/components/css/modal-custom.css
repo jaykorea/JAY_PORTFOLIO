@@ -1,12 +1,14 @@
+.modal {
+  overflow: hidden;
+}
+
 .modal-dialog {
-  margin-top: 10vh;
-  max-width: 90%;
-  /* max-height: 90vh; */
-  /* height: 80vh; */
+  margin: 10vh auto; /* Set vertical margin to 10vh and horizontal margin to auto */
+  max-width: 95%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black; /* Set the text color to black */
+  color: black;
   overflow-y: hidden;
   font-size: 75%;
 }
@@ -23,13 +25,36 @@
   padding-right: 14vw;
 }
 
+@media (max-width:428px) {
+  .modal-title h2 {
+    font-size: 95%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+
 .modal-body{
-  max-height: calc(100vh - 300px);
+  max-height: calc(100vh - 250px);
   overflow-y: auto;
   padding-left: 15vw;
   padding-right: 15vw;
   font-size: 1em; /* Adjust the value as needed */
 }
+
+@media (max-width:428px) {
+  .modal-body {
+    max-height: calc(100vh - 280px);
+    font-size: 75%;
+  }
+}
+
+@media ((min-width:428px) and (max-width:1024px)) {
+  .modal-body {
+    max-height: calc(100vh - 335px);
+  }
+  
+}
+
 .modal-body img {
   overflow-y: auto;
 }

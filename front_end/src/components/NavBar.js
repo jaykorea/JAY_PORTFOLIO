@@ -5,6 +5,7 @@ import temp_logo from '../assets/img/jay_logo.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
+import navIcon4 from '../assets/img/nav-icon4.svg';
 import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
@@ -52,8 +53,12 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <HashLink smooth to="#"><img src={navIcon1} alt="" /></HashLink>
-                <HashLink smooth to="#"><img src={navIcon2} alt="" /></HashLink>
+                <a href="https://www.zeroexposure1905.com" target="_blank" rel="noopener noreferrer">
+                  <img src={navIcon1} alt="" />
+                </a>
+                <a href="https://github.com/jaykorea" target="_blank" rel="noopener noreferrer">
+                  <img src={navIcon4} alt="" />
+                </a>
                 {/* <HashLink smooth to="#"><img src={navIcon3} alt="" /></HashLink> */}
               </div>
               <HashLink smooth to='#contact'>

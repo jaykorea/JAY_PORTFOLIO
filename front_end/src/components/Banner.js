@@ -71,9 +71,9 @@ export const Banner = () => {
               <TrackVisibility>
                 {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <span className="tagline">Welcome to my CV</span>
+                  <span className="tagline">welcome</span>
                   <h1>{`Hi! I'm Jay`} <br></br></h1>
-                  <h2><span className="txt-rotate" dataPeriod="1" data-rotate='[ "Robotics Engineer", "Embedded S/W Engineer", "Software Architect"]'><span className="wrap">{text}</span></span></h2>
+                  <h2><span className="txt-rotate" dataPeriod="1" data-rotate='[ "Robotics Engineer", "Embedded S/W Engineer"]'><span className="wrap">{text}</span></span></h2>
                   <p>{paragraphText}</p>
                   <p>{paragraphText2}</p>
                     <HashLink smooth to="#contact">
@@ -82,14 +82,14 @@ export const Banner = () => {
                 </div>}
               </TrackVisibility>
             </Col>
-            <Col xs={12} md={6} xl={5}>
+            {/* <Col xs={12} md={6} xl={5}>
               <TrackVisibility>
                 {({ isVisible }) =>
                   <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                     <img src={headerImg} alt="Header Img"/>
                   </div>}
               </TrackVisibility>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </section>

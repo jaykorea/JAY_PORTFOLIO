@@ -239,7 +239,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 0;
   padding: 14vh 0 200px 0;
   /* background-image: url('./assets/img/banner-bg.png'); */
-  background-color: #0c0c0c;
+  background-color: #121212;
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -290,28 +290,31 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .banner p {
   color: #ffffff;
-  display: block;
+  display: flex;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   text-align: left;
-  width: 96%;
+  width: 700px;
   margin-left: 1%;
+  margin-right: 1%;
   margin-bottom: 2vh;
+  text-align: justify;
+  word-break: break-all;
 }
 
-@media (max-width:1204px) {
+@media (max-width:428px) {
 	.banner p {
     display: block;
     font-size: 18px;
-    text-align: left;
-		width: 75vw;
+    width: auto;
 	}
 }
 
 .banner button {
   margin-bottom: 5vh;
+  margin-left: 0.5vw;
   color: #fff;
   font-weight: 700;
   font-size: 20px;
@@ -503,7 +506,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   border-radius: 30px;
   overflow: hidden;
-  height: 34vh;
+  height: auto;
   margin-bottom: 24px;
   justify-content: center;
 }
@@ -546,7 +549,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
 }
 .project-video {
-  width: 80%; /* Set the desired width for the video */
+  max-width: 100%; /* Set the desired width for the video */
+  width: auto;
   margin-bottom: 10px; /* Add margin to create spacing */
   display: block;
   margin: 0 auto;
