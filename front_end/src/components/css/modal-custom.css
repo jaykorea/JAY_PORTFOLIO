@@ -36,6 +36,7 @@
 .modal-body{
   max-height: calc(100vh - 250px);
   overflow-y: auto;
+  overflow-x: hidden;
   padding-left: 15vw;
   padding-right: 15vw;
   font-size: 1em; /* Adjust the value as needed */

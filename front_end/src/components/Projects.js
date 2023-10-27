@@ -34,7 +34,7 @@ import sw_lib_block from "../assets/img/robot/robot2/sw_lib_block.png";
 import joynode from "../assets/img/robot/robot2/joynode.png";
 import joystick_module from "../assets/img/robot/robot2/joystick_module.png";
 import del_chassis from "../assets/img/robot/robot2/del_chassis.png";
-import del_mechanical_design from "../assets/img/robot/robot2/del_mechanical_design.png";
+import del_mechanical_design from "../assets/img/robot/robot2/robot2.png";
 import ekf_node from "../assets/img/robot/robot2/ekf_node.png";
 import obstacle_layer from "../assets/img/robot/robot2/obstacle_layer.png";
 import inflation_layer from "../assets/img/robot/robot2/inflation_layer.png";
@@ -53,6 +53,10 @@ import robotImg4 from "../assets/img/robot/robot3/serv_bot2.png";
 import robotImg5 from "../assets/img/jay.png";
 
 import robotImg6 from "../assets/img/jay.png";
+
+
+
+
 
 import rndImg1 from "../assets/img/rnd/rnd1/brake_algo.png";
 import sys_arch from "../assets/img/rnd/rnd1/sys_arch.png";
@@ -89,6 +93,12 @@ import s2 from "../assets/img/rnd/rnd1/s2.png";
 import s3 from "../assets/img/rnd/rnd1/s3.png";
 import s4 from "../assets/img/rnd/rnd1/s4.png";
 import s5 from "../assets/img/rnd/rnd1/s5.png";
+
+
+
+
+
+import iotImg1 from "../assets/img/iot/iot1/dbms.png";
 
 
 // import demo_video from "../assets/video/drive_test.mp4";
@@ -242,6 +252,23 @@ const VideoComponent_robot2_voxel = () => {
     </div>
   );
 };
+
+const VideoComponent_iot1_demo = () => {
+  const [ref, inView] = useInView({ triggerOnce: true });
+
+  return (
+    <div ref={ref}>
+      <ReactPlayer
+      className="project-video"
+      url='https://youtu.be/Nf7kzskk8qw'
+      controls
+      playing={inView}
+      playbackRate={1.0}
+    />
+    </div>
+  );
+};
+
 
 export const Projects = () => {
 
@@ -578,9 +605,9 @@ export const Projects = () => {
         <br />
         <h4>⦁ Mechanical Designs</h4>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <img src={del_mechanical_design} alt={title} style={{ width: '75%', border: '0px solid rgba(0, 0, 0, 0.5)' }} />
+          <img src={del_mechanical_design} alt={title} style={{ width: '75%', border: '5px solid rgba(0, 0, 0, 0.8)' }} />
         </div>
-        <span_sub>[Robot 3D design using CATIA]</span_sub>
+        <span_sub>[Robot 3D designed with CATIA]</span_sub>
         <br/>
         - It basically designed with 3D design tool CATIA. All the sensor coordinations are based on the axis(Y) of the motor axis(i.e. wheel radius length from the ground).
         <br />
@@ -1398,157 +1425,94 @@ export const Projects = () => {
         ⦁ The performance of the manufactured braking control system could be confirmed through real-vehicle experiments, and it was an opportunity to explore improvements in the system's hardware and software.
         <br/>
         <br/>
-        <h4>⦁ Reference</h4>  
-        [1] Ariyanto, Mochammad, et al. "Development of low-cost autonomous
-        emergency braking system (AEBS) for an electric car." 2018 5th
-        International Conference on Electric Vehicular Technology (ICEVT).
-        IEEE, 2018.
+        <h4>⦁ Reference</h4>
+        [1] Ariyanto, Mochammad, et al. "Development of low-cost autonomous emergency braking system (AEBS) for an electric car." 2018 5th International Conference on Electric Vehicular Technology (ICEVT). IEEE, 2018.
         <br/>
-        [2] Cicchino, Jessica B. "Effectiveness of forward collision warning and
-        autonomous emergency braking systems in reducing front-to-rear
-        crash rates." Accident Analysis & Prevention 99 (2017): 142-152.
-        [3] Hiraoka, Toshihiro, et al. "Collision risk evaluation index based on
-        deceleration for collision avoidance (first report)-Proposal of a new
-        index to evaluate collision risk against forward obstacles." Review of
-        Automotive Engineering 30.4 (2009): 429-437.
+        [2] Cicchino, Jessica B. "Effectiveness of forward collision warning and autonomous emergency braking systems in reducing front-to-rear crash rates." Accident Analysis & Prevention 99 (2017): 142-152.
         <br/>
-        [4] pass.
+        [3] Hiraoka, Toshihiro, et al. "Collision risk evaluation index based on deceleration for collision avoidance (first report)-Proposal of a new index to evaluate collision risk against forward obstacles." Review of Automotive Engineering 30.4 (2009): 429-437.
         <br/>
-        [5] pass.
+        [4] ...
         <br/>
-        [6] http://www.releasewire.com/multimedia/photos/forecast-of-global-re
-        ach-stacker-players-market-2023-153459.htm
+        [5] ...
         <br/>
-        [7] https://www.databridgemarketresearch.com/reports/global-reach-sta
-        cker-market
+        [6] www.releasewire.com/multimedia/photos/forecast-of-global-reach-stacker-players-market-2023-153459.htm
         <br/>
-        [8] Saito, Yuichi, and Pongsathorn Raksincharoensak. "Shared control
-        in risk predictive braking maneuver for preventing collisions with
-        pedestrians." IEEE Transactions on Intelligent Vehicles 1.4 (2016):
-        314-324.
+        [7] www.databridgemarketresearch.com/reports/global-reach-stacker-market
         <br/>
-        [9] Abu, Mohd Azlan, et al. "Automated car braking system: Using
-        neural network system via Labview environment." 2012 IEEE
-        Conference on Open Systems. IEEE, 2012.
+        [8] Saito, Yuichi, and Pongsathorn Raksincharoensak. "Shared control in risk predictive braking maneuver for preventing collisions with pedestrians." IEEE Transactions on Intelligent Vehicles 1.4 (2016): 314-324.
         <br/>
-        [10] Nakamura, Yusuke, and Toshiyuki Murakami. "Advanced
-        Deceleration Control Considering Driving Resistance by Predicting
-        the Position of Pedestrians." IEEJ Journal of Industry Applications
-        8.2 (2019): 334-341.
+        [9] Abu, Mohd Azlan, et al. "Automated car braking system: Using neural network system via Labview environment." 2012 IEEE Conference on Open Systems. IEEE, 2012.
         <br/>
-        [11] Cicchino, Jessica B. "Real-world effects of rear automatic braking
-        and other backing assistance systems." Journal of safety research
-        68 (2019): 41-47.
+        [10] Nakamura, Yusuke, and Toshiyuki Murakami. "Advanced Deceleration Control Considering Driving Resistance by Predicting the Position of Pedestrians." IEEJ Journal of Industry Applications 8.2 (2019): 334-341.
         <br/>
-        [12] Zhang, Xiang, et al. "A fast learning method for accurate and
-        robust lane detection using two-stage feature extraction with YOLO
-        v3." Sensors 18.12 (2018): 4308.
+        [11] Cicchino, Jessica B. "Real-world effects of rear automatic braking and other backing assistance systems." Journal of safety research 68 (2019): 41-47.
         <br/>
-        [13] Song, Wenjie, et al. "Lane detection and classification for forward
-        collision warning system based on stereo vision." IEEE Sensors
-        Journal 18.12 (2018): 5151-5163.
+        [12] Zhang, Xiang, et al. "A fast learning method for accurate and robust lane detection using two-stage feature extraction with YOLOv3." Sensors 18.12 (2018): 4308.
         <br/>
-        [14] He, Xiangkun, et al. "Autonomous emergency braking based on
-        radial basis function neural network variable structure control for
-        collision avoidance." 2017 IEEE 2nd Information Technology,
-        Networking, Electronic and Automation Control Conference (ITNEC).
-        IEEE, 2017.
+        [13] Song, Wenjie, et al. "Lane detection and classification for forward collision warning system based on stereo vision." IEEE Sensors Journal 18.12 (2018): 5151-5163.
         <br/>
-        [15] Yang, Wei, et al. "Research on longitudinal active collision
-        avoidance of autonomous emergency braking pedestrian system
-        (AEB-P)." Sensors 19.21 (2019): 4671.
+        [14] He, Xiangkun, et al. "Autonomous emergency braking based on radial basis function neural network variable structure control for collision avoidance." 2017 IEEE 2nd Information Technology, Networking, Electronic and Automation Control Conference (ITNEC).IEEE, 2017.
         <br/>
-        [16] Wang, Yan, et al. "Pseudo-lidar from visual depth estimation:
-        Bridging the gap in 3d object detection for autonomous driving."
-        Proceedings of the IEEE/CVF Conference on Computer Vision and
-        Pattern Recognition. 2019.[Teslar] [depth]
+        [15] Yang, Wei, et al. "Research on longitudinal active collision avoidance of autonomous emergency braking pedestrian system(AEB-P)." Sensors 19.21 (2019): 4671.
         <br/>
-        [17] Qian, Rui, et al. "End-to-end pseudo-lidar for image-based 3d
-        object detection." Proceedings of the IEEE/CVF Conference on
-        Computer Vision and Pattern Recognition. 2020.[Teslar] [depth]
+        [16] Wang, Yan, et al. "Pseudo-lidar from visual depth estimation:Bridging the gap in 3d object detection for autonomous driving." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2019.[Teslar] [depth]
         <br/>
-        [18] Tosi, Fabio, et al. "Learning monocular depth estimation infusing
-        traditional stereo knowledge." Proceedings of the IEEE/CVF
-        Conference on Computer Vision and Pattern Recognition. 2019.
-        [depth]
+        [17] Qian, Rui, et al. "End-to-end pseudo-lidar for image-based 3d object detection." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020.[Teslar] [depth]
         <br/>
-        [19] Chae, Hyunmin, et al. "Autonomous braking system via deep
-        reinforcement learning." 2017 IEEE 20th International conference on
-        intelligent transportation systems (ITSC). IEEE, 2017.
+        [18] Tosi, Fabio, et al. "Learning monocular depth estimation infusing traditional stereo knowledge." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2019.[depth]
         <br/>
-        [20] Khemmar, Redouane, et al. "Real time pedestrian and object
-        detection and tracking-based deep learning. application to drone
-        visual tracking." (2019).
+        [19] Chae, Hyunmin, et al. "Autonomous braking system via deep reinforcement learning." 2017 IEEE 20th International conference on intelligent transportation systems (ITSC). IEEE, 2017.
         <br/>
-        [21] Duman, Sonay, Abdullah Elewi, and Zeki Yetgin. "Design and
-        implementation of an embedded real-Time system for guiding
-        visually impaired individuals." 2019 International Artificial
-        Intelligence and Data Processing Symposium (IDAP). IEEE, 2019.
+        [20] Khemmar, Redouane, et al. "Real time pedestrian and object detection and tracking-based deep learning. application to drone visual tracking." (2019).
         <br/>
-        [22] Strbac, Bojan, et al. "YOLO Multi-Camera Object Detection and
-        Distance Estimation." 2020 Zooming Innovation in Consumer
-        Technologies Conference (ZINC). IEEE, 2020.
+        [21] Duman, Sonay, Abdullah Elewi, and Zeki Yetgin. "Design and implementation of an embedded real-Time system for guiding visually impaired individuals." 2019 International Artificial Intelligence and Data Processing Symposium (IDAP). IEEE, 2019.
         <br/>
-        [23] https://www.servethehome.com/new-nvidia-jetson-xavier-nx-launche
-        d/nvidia-jetson-xavier-nx-and-new-jetson-family/
+        [22] Strbac, Bojan, et al. "YOLO Multi-Camera Object Detection and Distance Estimation." 2020 Zooming Innovation in Consumer Technologies Conference (ZINC). IEEE, 2020.
         <br/>
-        [24] https://developer.nvidia.com/embedded/jetson-developer-kits
+        [23] www.servethehome.com/new-nvidia-jetson-xavier-nx-launched/nvidia-jetson-xavier-nx-and-new-jetson-family/
         <br/>
-        [25] https://tutorial.cytron.io/2020/10/14/nvidia-jetson-nano-developer-ki
-        t-a02-vs-b01-vs-2gb/
+        [24] developer.nvidia.com/embedded/jetson-developer-kits
         <br/>
-        [26] https://developer.nvidia.com/embedded/learn/get-started-jetson-nan
-        o-devkit#intro
+        [25] tutorial.cytron.io/2020/10/14/nvidia-jetson-nano-developer-kit-a02-vs-b01-vs-2gb/
         <br/>
-        [27] https://www.jetsonhacks.com/nvidia-jetson-nano-j41-header-pinout
+        [26] developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#intro
         <br/>
-        [28] https://www.elec4.co.kr/article/articleView.asp?idx=24749
+        [27] www.jetsonhacks.com/nvidia-jetson-nano-j41-header-pinout
         <br/>
-        [29] Lourenco, Francisco, and Helder Araujo. "Intel RealSense SR305,
-        D415 and L515: Experimental Evaluation and Comparison of Depth
-        Estimation." VISIGRAPP (4: VISAPP). 2021.
+        [28] www.elec4.co.kr/article/articleView.asp?idx=24749
         <br/>
-        [30] https://www.intelrealsense.com/lidar-camera-l515/
+        [29] Lourenco, Francisco, and Helder Araujo. "Intel RealSense SR305, D415 and L515: Experimental Evaluation and Comparison of Depth Estimation." VISIGRAPP (4: VISAPP). 2021.
+        <br/>
+        [30] www.intelrealsense.com/lidar-camera-l515/
         <br/>
         [31] Intel RealSense LiDAR Camera L515 Datasheet
         <br/>
-        [32] https://emanual.robotis.com/docs/en/dxl/x/xm430-w350/
+        [32] emanual.robotis.com/docs/en/dxl/x/xm430-w350/
         <br/>
-        [33] https://emanual.robotis.com/docs/en/parts/controller/opencr10/
+        [33] emanual.robotis.com/docs/en/parts/controller/opencr10/
         <br/>
-        [34] Sanchez, S. A., H. J. Romero, and A. D. Morales. "A review:
-        Comparison of performance metrics of pretrained models for object
-        detection using the TensorFlow framework." IOP Conference Series:
-        Materials Science and Engineering. Vol. 844. No. 1. IOP Publishing,
-        2020.
+        [34] Sanchez, S. A., H. J. Romero, and A. D. Morales. "A review:Comparison of performance metrics of pretrained models for object detection using the TensorFlow framework." IOP Conference Series:Materials Science and Engineering. Vol. 844. No. 1. IOP Publishing, 2020.
         <br/>
-        [35] Lee, Yong-Hwan, and Youngseop Kim. "Comparison of CNN and
-        YOLO for Object Detection." Journal of the semiconductor & display
-        technology 19.1 (2020): 85-92.
+        [35] Lee, Yong-Hwan, and Youngseop Kim. "Comparison of CNN and YOLO for Object Detection." Journal of the semiconductor & display technology 19.1 (2020): 85-92.
         <br/>
-        [36] REDMON, Joseph; FARHADI, Ali. YOLOv3: An incremental
-        improvement. arXiv preprint arXiv:1804.02767, 2018.
+        [36] REDMON, Joseph; FARHADI, Ali. YOLOv3: An incremental improvement. arXiv preprint arXiv:1804.02767, 2018.
         <br/>
+        [37] Redmon, Joseph, et al. "You only look once: Unified, real-time object detection." Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.
         <br/>
-        [37] Redmon, Joseph, et al. "You only look once: Unified, real-time
-        object detection." Proceedings of the IEEE conference on computer
-        vision and pattern recognition. 2016.
+        [38] Redmon, Joseph, and Ali Farhadi. "YOLO9000: better, faster, stronger." Proceedings of the IEEE conference on computer vision and pattern recognition. 2017.
         <br/>
-        [38] Redmon, Joseph, and Ali Farhadi. "YOLO9000: better, faster,
-        stronger." Proceedings of the IEEE conference on computer vision
-        and pattern recognition. 2017.
-        <br/>
-        [39] https://pjreddie.com/darknet/yolo/
+        [39] pjreddie.com/darknet/yolo/
         <br/>
         [40] Reyes, Esteban, et al. "Near real-time object recognition for pepper based on deep neural networks running on a backpack." Robot World Cup. Springer, Cham, 2018.
         <br/>
-        [41] https://github.com/pjreddie/darknet/issues/901
+        [41] github.com/pjreddie/darknet/issues/901
         <br/>
         [42] ROS robot programming, 2017
         <br/>
-        [43] https://www.goldenmotor.com/frame-bldcmotor.htm
+        [43] www.goldenmotor.com/frame-bldcmotor.htm
         <br/>
-        [44] https://www.goldenmotor.com/HPC%20Series%20Controller%20User%20Guide.pdf
+        [44] www.goldenmotor.com/HPC.pdf
         <br/>
         <br/>
         Following are results of a study on the "Convergence and
@@ -1620,12 +1584,18 @@ export const Projects = () => {
     },
   ];
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
   const iot = [
     {
-      title: "IoT Project1",
-      thumbnail_title: "IoT Project1",
-      thumbnail_description: "My 1st IoT Project",
-      thumbnail: tbd,
+      title: "Development of DBMS moudle", 
+      thumbnail_title: "Driver behavior monitoring system",
+      thumbnail_description: "Development of DBMS moudle",
+      thumbnail: iotImg1,
 
       main_body: (
         <span>
@@ -1633,7 +1603,7 @@ export const Projects = () => {
         <br/>
         This project was initiated to address the growing number of vehicles and the need for vehicle management of car-sharing services used by an unspecified number of people and the need to fulfill the duty of safe driving for traffic safety. Through this study, OBD in-vehicle information is transmitted to AWS Cloud servers using LTE networks, and IoT (Internet of Things device) that can provide information to shared vehicles, insurance companies, or individuals by providing authentication methods that specific groups or individuals can access. This article discusses the overall architecture of the DBMS (Driver Behavior Monitoring System), market demand, concept of OBD PID, hardware and software used in research, algorithm writing for data processing, algorithm operation results, and analysis<br/>
         <h3>Demo Video</h3>
-        <VideoComponent_robot2_demo/>
+        <VideoComponent_iot1_demo/>
         <span_sub>[Demonstration of Route follow-up, obstacle avoidance on Visual-SLAM]</span_sub>
         <h3>Hardware</h3>
         The hardware of the delivery robot was meticulously designed to ensure optimal performance. The mechanical design was carefully crafted to allow the robot to navigate various terrains and environments.
